@@ -3,7 +3,7 @@
 </p>
 
 <button class="accordion">Lesson 1 (HTML/CSS block)</button>
-<div class="panel">
+<div class="panel" >
     <?php
         include 'templates/default/hometasks/1.php';
     ?>
@@ -16,9 +16,11 @@
     ?>
 </div>
 
-<button class="accordion">Lesson 3</button>
-<div class="panel">
-    3th home task.
+<button class="accordion">Lesson 3 (PHP block)</button>
+<div class="panel"  id="panel3">
+    <?php
+        include 'templates/default/hometasks/3.php';
+    ?>
 </div>
 
 <script>

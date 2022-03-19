@@ -3,11 +3,11 @@ $content = new Content();
 
 class Content
 {
-    private $pagesDir = 'templates/default/pages';
-    private $menu = null;
-    private $nav = null;
+    private string $pagesDir = 'templates/default/pages';
+    private string $menu = '';
+    private string $nav = '';
 
-    public function getPagesList($class)
+    public function getPagesList($class): string
     {
         $files = scandir($this->pagesDir, 0);
 
@@ -20,7 +20,8 @@ class Content
         return $this->menu;
     }
 
-    public function getMenuList(){
+    public function getMenuList(): string
+    {
         $files = scandir($this->pagesDir, 0);
 
         for($i = 0; $i < sizeof($files); $i++) {

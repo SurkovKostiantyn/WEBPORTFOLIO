@@ -166,6 +166,9 @@ header {
     transition: max-height 0.2s ease-out;
     font-size: setFontSize(1.1);
     text-align: left;
+    & > form{
+      overflow: hidden;
+    }
     & .result {
       font-size: setFontSize(1.5);
       background: linear-gradient(to left, #00C853, #d359ff);

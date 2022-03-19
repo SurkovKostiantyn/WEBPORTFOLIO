@@ -146,6 +146,9 @@ header .logo > a > .spanHead2 {
   font-size: 1.1em;
   text-align: left;
 }
+.content .panel > form {
+  overflow: hidden;
+}
 .content .panel .result {
   font-size: 1.5em;
   background: linear-gradient(to left, #00C853, #d359ff);

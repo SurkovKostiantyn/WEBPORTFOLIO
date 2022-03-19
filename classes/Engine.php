@@ -3,7 +3,7 @@ $engine = new Engine();
 
 class Engine
 {
-    private $_page_file = null;
+    private string $_page_file;
     private $_error = null;
 
     public function __construct() {
@@ -16,7 +16,7 @@ class Engine
             $this->_page_file = str_replace("", null, $_GET["page"]);
 
             if (!file_exists("templates/default/pages/" . $this->_page_file . ".php")) {
-                $this->_setError("Страница не найдена"); //Ошибку на экран
+                $this->_setError(); //Ошибку на экран
                 $this->_page_file = "main"; //Открываем главную страницу
             }
         }
@@ -37,27 +37,25 @@ class Engine
         echo $pageName;
     }
 
-    private function _setError($error) {
-        $this->_error = $error;
+    private function _setError() {
+        $this->_error = "Страница не найдена";
     }
 
     public function getError() {
         return $this->_error;
     }
 
-    public function getContentPage() {
+    public function getContentPage(): string
+    {
         return  "templates/default/pages/$this->_page_file.php";
     }
 
-    public function getTitle() {
-        switch ($this->_page_file) {
-            case "main":
-                return "WP main";
-                break;
-            default:
-                return "WP";
-                break;
-        }
+    public function getTitle(): string
+    {
+        return match ($this->_page_file) {
+            "main" => "WP main",
+            default => "WP",
+        };
     }
 }
 

@@ -1,5 +1,5 @@
 <header id="hdr">
     <div class="logo">
-        <a><?php $engine->heading() ?></a>
+        <a><?php $Engine->heading() ?></a>
     </div>
 </header>

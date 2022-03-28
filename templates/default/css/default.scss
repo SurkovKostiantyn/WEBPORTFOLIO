@@ -166,6 +166,7 @@ header {
     transition: max-height 0.2s ease-out;
     font-size: setFontSize(1.1);
     text-align: left;
+
     & > form{
       overflow: hidden;
     }
@@ -319,4 +320,89 @@ footer {
 *[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
   background-position: left .7em top 50%, 0 0;
   padding: .6em .8em .5em 1.4em;
+}
+
+pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, с 1999 года*/
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background: $bgColor url(/files/bg.jpg) no-repeat fixed center top;
+  padding-top: 50px;
+  & .modal-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: $textColor;
+    margin: 5% auto 15% auto;
+    max-width: 400px;
+    & .regForm, .loginForm {
+      padding: 16px;
+      & object{
+        & > a {
+          background: linear-gradient(to left, #00C853, #d359ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-decoration: none;
+          font-size: setFontSize(1.1);
+          font-weight: bolder;
+        }
+      }
+      & > p{
+        background: linear-gradient(to left, #00C853, #d359ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bolder;
+        font-size: setFontSize(1.2);
+      }
+      & .clearfix {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        & .cancelbtn, .signupbtn {
+          background: none;
+          color: $textColor;
+          font-size: setFontSize(1.0);
+          margin: 6px;
+          float: left;
+          width: 30%;
+          padding: 14px 20px;
+          @include borders(2px);
+        }
+      }
+      & > input[type=text], > input[type=password] {
+        width: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        &:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+      }
+    }
+    .regForm{
+      display: block;
+    }
+    .loginForm{
+      display: none;
+    }
+  }
 }

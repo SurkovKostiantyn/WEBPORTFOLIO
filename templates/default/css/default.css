@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 html, body {
@@ -301,6 +302,102 @@ footer > .footer-copy {
 *[dir=rtl] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
   background-position: left 0.7em top 50%, 0 0;
   padding: 0.6em 0.8em 0.5em 1.4em;
+}
+
+pre {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, с 1999 года*/
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background: #0d1a13 url(/files/bg.jpg) no-repeat fixed center top;
+  padding-top: 50px;
+}
+.modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: #f2e5ec;
+  margin: 5% auto 15% auto;
+  max-width: 400px;
+}
+.modal .modal-content .regForm, .modal .modal-content .loginForm {
+  padding: 16px;
+}
+.modal .modal-content .regForm object > a, .modal .modal-content .loginForm object > a {
+  background: linear-gradient(to left, #00C853, #d359ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+.modal .modal-content .regForm > p, .modal .modal-content .loginForm > p {
+  background: linear-gradient(to left, #00C853, #d359ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+.modal .modal-content .regForm .clearfix, .modal .modal-content .loginForm .clearfix {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.modal .modal-content .regForm .clearfix .cancelbtn, .modal .modal-content .regForm .clearfix .signupbtn, .modal .modal-content .loginForm .clearfix .cancelbtn, .modal .modal-content .loginForm .clearfix .signupbtn {
+  background: none;
+  color: #f2e5ec;
+  font-size: 1em;
+  margin: 6px;
+  float: left;
+  width: 30%;
+  padding: 14px 20px;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #00C853, #d359ff);
+}
+.modal .modal-content .regForm > input[type=text], .modal .modal-content .regForm > input[type=password], .modal .modal-content .loginForm > input[type=text], .modal .modal-content .loginForm > input[type=password] {
+  width: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+}
+.modal .modal-content .regForm > input[type=text]:focus, .modal .modal-content .regForm > input[type=password]:focus, .modal .modal-content .loginForm > input[type=text]:focus, .modal .modal-content .loginForm > input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.modal .modal-content .regForm {
+  display: block;
+}
+.modal .modal-content .loginForm {
+  display: none;
 }
 
 /*# sourceMappingURL=default.css.map */

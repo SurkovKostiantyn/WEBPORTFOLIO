@@ -11,7 +11,5 @@
                 continue;
             echo 'char '.$count_keys[$i].' : '.$count_values[$i].' times <br>';
         }
-    }else{
+    }else
         echo 'Error: empty string';
-    }
-?>

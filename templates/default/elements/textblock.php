@@ -9,14 +9,14 @@
     ?>
 </div>
 
-<button class="accordion">Lesson 2 (PHP block)</button>
+<button class="accordion">Lesson 1 (PHP block)</button>
 <div class="panel">
     <?php
         include 'templates/default/hometasks/2.php';
     ?>
 </div>
 
-<button class="accordion">Lesson 3 (PHP block)</button>
+<button class="accordion">Lesson 2 (PHP block)</button>
 <div class="panel"  id="panel3">
     <?php
         include 'templates/default/hometasks/3.php';
@@ -36,4 +36,6 @@
             }
         });
     }
+
+    window.addEventListener('keydown',function(e){if(e.keyIdentifier==='U+000A'||e.keyIdentifier==='Enter'||e.keyCode===13){if(e.target.nodeName==='INPUT'&&e.target.type==='text'){e.preventDefault();return false;}}},true);
 </script>

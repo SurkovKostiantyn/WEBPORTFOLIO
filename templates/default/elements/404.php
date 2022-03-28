@@ -1,1 +1,1 @@
-<?php  echo '' . $engine->getError() . '';?>
+<?php  echo '' . $Engine->getError() . '';?>

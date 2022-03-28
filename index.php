@@ -1,17 +1,12 @@
 <?php
-    $classList = scandir('classes', 0);
-    for($i=0; $i < sizeof($classList); $i++){
-        if (str_contains($classList[$i], '.php')){
-            include_once 'classes/' . $classList[$i];
-        }
-    }
-
+    include_once 'includes/DB.php';
+    include_once 'includes/autoload.php';
     include_once 'templates/default/elements/head.php';
     include_once 'templates/default/elements/nav.php';
 
-if (isset($engine)) {
-    if ($engine->getError()) include_once 'templates/default/elements/404.php'; else
-        include $engine->getContentPage();
-}  // обработчик страниц
+if (isset($Engine)) {
+    if ($Engine->getError()) include_once 'templates/default/elements/404.php'; else
+        include $Engine->getContentPage();
+}  else echo 'Error';
 
     include_once 'templates/default/elements/footer.php';

@@ -247,6 +247,8 @@ form {
     width: 100%;
   }
   & > .content-links{
+    display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
   }
   & ul{

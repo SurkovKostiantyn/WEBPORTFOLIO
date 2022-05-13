@@ -220,6 +220,8 @@ form > button {
   width: 100%;
 }
 .content > .content-links {
+  display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
 }
 .content ul {

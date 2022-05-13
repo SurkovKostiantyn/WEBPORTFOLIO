@@ -1,12 +1,18 @@
 <?php
-    include_once 'includes/DB.php';
-    include_once 'includes/autoload.php';
-    include_once 'templates/default/elements/head.php';
-    include_once 'templates/default/elements/nav.php';
 
-if (isset($Engine)) {
-    if ($Engine->getError()) include_once 'templates/default/elements/404.php'; else
-        include $Engine->getContentPage();
-}  else echo 'Error';
+    if (!isset($_SESSION)) {
+        session_start();
+    }
 
-    include_once 'templates/default/elements/footer.php';
+    include_once 'includes/autoload.php';   // загрузка классов
+
+    include_once 'includes/elements/head.php';
+    include_once 'includes/elements/header.php';
+    include_once 'includes/elements/nav.php';
+
+    if (isset($Engine)) {
+        if ($Engine->getError()) include_once 'includes/index/error.php'; else
+            include $Engine->getContentPage();
+    }  else echo 'Error: Engine isn\'t set';
+
+    include_once 'includes/elements/footer.php';

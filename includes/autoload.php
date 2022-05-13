@@ -4,7 +4,7 @@ function load_classes($class_name){
     if (file_exists($path_to_file)) {
         require_once $path_to_file;
     }
-    ${$class_name} = new $class_name(); // don't working =/
+    ${$class_name} = new $class_name();
 
 } spl_autoload_register('load_classes');
 

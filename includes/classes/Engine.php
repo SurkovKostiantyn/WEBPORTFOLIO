@@ -1,31 +1,35 @@
 <?php
-class Engine
-{
+class Engine{
     private string $_page_file;
+    private string $title = "WP ";
+    private string $pagesDir = 'includes/pages';
     private $_error = null;
+    private string $nav = '';
 
     public function __construct() {
         if (isset($_GET["page"])) {
             $searchArr = array(".","/","");
-            $this->_page_file = str_replace($searchArr, null, $_GET["page"]);
+            $pageName = str_replace($searchArr, null, $_GET["page"]); // получаем, например, CSS HTML PHP
 
-            if (!file_exists("templates/default/pages/" . $this->_page_file . ".php")) {
+            if (file_exists("includes/pages/$pageName.php")) {  // сначала с папки includes/pages
+                $this->_page_file = "includes/pages/$pageName.php";
+                $this->title .= strtoupper($pageName);
+            }
+            else if(file_exists("includes/index/$pageName.php")){ // потом другие странички с папки includes/index
+                $this->_page_file = "includes/index/$pageName.php";
+                $this->title .= strtoupper($pageName);
+            }
+            else{//если такой странички не существует, то
                 $this->_setError(); //Ошибку на экран
-                $this->_page_file = "main"; //Открываем главную страницу
+                $this->_page_file = "includes/index/404.php"; //Открываем 404
+                $this->title .= "404";
             }
         }
         //Если в GET запросе нет переменной page, то открываем главную
-        else $this->_page_file = "main";
+        else $this->_page_file = "includes/index/main.php";
     }
 
-    public function heading(): void{
-        $pageName = null;
-        $pageName .= '<span class="spanHead"><</span>Web Portfolio<span class="spanHead">></span><span class="spanHead2"><br>$';
-        $pageName .= isset($_GET["page"]) ? '' . $_GET["page"] . ' page</span>' : 'main page</span>';
-        echo $pageName;
-    }
-
-    private function _setError(){
+    private function _setError(): void {
         $this->_error = "Страница не найдена";
     }
 
@@ -34,14 +38,27 @@ class Engine
     }
 
     public function getContentPage(): string{
-        return  "templates/default/pages/$this->_page_file.php";
+        return $this->_page_file;
     }
 
     public function getTitle(): string{
-        return match ($this->_page_file) {
-            'main' => 'WP Main',
-            $this->_page_file => 'WP ' . strtoupper($this->_page_file),
-            default => 'WP',
-        };
+        return "<title>$this->title</title>";
+    }
+
+    public function getMenuList(): string  {
+        $files = scandir($this->pagesDir, 0);
+
+        for($i = 0; $i < sizeof($files); $i++) {
+            if (str_contains($files[$i], '.php')) {
+                $name = str_replace(".php", null, $files[$i]);
+                $url = str_replace(".php", null, $_SERVER['REQUEST_URI']);
+                $class = 'class="HideAble';
+                if(str_contains($url, $name)){
+                    $class .= ' active';
+                }
+                $this->nav .= '<a ' . $class . '" href="/?page=' . $name . '">' . strtoupper($name) . '</a>';
+            }
+        }
+        return $this->nav;
     }
 }

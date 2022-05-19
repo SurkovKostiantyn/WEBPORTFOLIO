@@ -16,12 +16,14 @@
         This site created with using PHP, CSS and simple examples of JS. Realisation of some elements of this site you can find on links below. This links contains a lot of code examples
         that explain chosen way how to write each element of site.
     </p>
+    <div class="todoList">
     <?php
         if(isset($_SESSION['id']))
             echo $Connect->getTODOList($_SESSION['id']);
         else
             echo $Connect->getTODOList(-1);
     ?>
+    </div>
 </div>
 <script>
     function changeTick(todoID, tickID, status){

@@ -1,9 +1,10 @@
 <?php
 
+if(isset($_POST['format'])){
+    echo 'Hello world!<br>' . date($_POST['format']);
+}
 
 if(isset($_POST['id']) && isset($_POST['tickID']) && isset($_POST['status'])){
-
-    //if(!isset($_SESSION['id']))
 
     $con = mysqli_connect(
         'auris.cityhost.com.ua',

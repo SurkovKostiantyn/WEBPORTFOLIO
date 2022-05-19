@@ -289,6 +289,7 @@ select > option > :hover {
   margin-left: 20px;
 }
 .content .todoList {
+  min-width: 100%;
   display: flex;
   align-content: flex-start;
   justify-content: space-evenly;

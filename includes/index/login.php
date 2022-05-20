@@ -60,18 +60,54 @@ mysqli_close($con);
 ?>
 
 <div class="content">
-    <h3>Registration: you haven't an account</h3>
+    <h3 style="width: 100%;">Registration: you haven't an account</h3>
     <form method="post">
-        <input type="text" placeholder="&#xf007; Enter your Username" name="username-reg" autocomplete="on" required>
-        <input type="text" placeholder="&#xf0e0; Enter Email" name="email-reg" autocomplete="on" required>
-        <input type="text" placeholder="Enter First name" name="fname-reg" autocomplete="on">
-        <input type="text" placeholder="Enter Last name" name="lname-reg" autocomplete="on">
-        <input type="text" placeholder="&#xf095; Enter Phone number" name="phone-reg" autocomplete="on">
-        <input type="password" placeholder="&#xF13e; Enter Password" name="password-reg" autocomplete="on" required>
-        <input type="password" placeholder="&#xF13e; Repeat Password" name="rep-password-reg" autocomplete="on" required>
+        <input type="text"
+               placeholder="&#xf007; Enter your Username"
+               name="username-reg"
+               autocomplete="on"
+               title="Username should only contain letters and digits (2-20 symbols)"
+               pattern="[A-z]{2,20}"
+               required>
+        <input type="text"
+               placeholder="&#xf0e0; Enter Email"
+               name="email-reg"
+               autocomplete="on"
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+               required>
+        <input type="text"
+               placeholder="Enter First name"
+               title="First name should only contain letters (2-20 symbols)"
+               name="fname-reg"
+               pattern="[A-Za-zА-Яа-яЁё]{2,20}"
+               autocomplete="on">
+        <input type="text"
+               placeholder="Enter Last name"
+               title="Last name should only contain letters"
+               name="lname-reg"
+               pattern="[A-Za-zА-Яа-яЁё]{2,20}"
+               autocomplete="on">
+        <input type="text"
+               placeholder="&#xf095; +38(___)-___-__-__"
+               name="phone-reg"
+               title="Phone number should be in format +38 (123) 456-78-90"
+               pattern="\+38\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+               autocomplete="on">
+        <input type="password"
+               placeholder="&#xF13e; Enter Password"
+               name="password-reg"
+               autocomplete="on"
+               pattern="(?=^.{8,20}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
+               required>
+        <input type="password"
+               placeholder="&#xF13e; Repeat Password"
+               name="rep-password-reg"
+               autocomplete="on"
+               pattern="(?=^.{8,20}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
+               required>
         <button type="submit">Sign Up</button>
     </form>
-    <h3>Authorization: you already have an account</h3>
+    <h3 style="width: 100%;">Authorization: you already have an account</h3>
     <form method="post">
         <label for="username"></label>
         <input type="text" placeholder="&#xf007; Enter login or email" name="username" id="username" autocomplete="on" required>

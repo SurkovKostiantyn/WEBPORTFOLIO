@@ -107,6 +107,22 @@ header{
   }
 }
 
+table{
+  margin: 10px;
+  border-collapse: collapse;
+  td, th {
+    border: 1px solid white;
+    text-align: center;
+    padding: 8px;
+  }
+  th{
+    color: $wordsColor1;
+  }
+  td{
+    color: $wordsColor2;
+  }
+}
+
 nav{
   width: 100%;
   background: linear-gradient(to right, rgba(0,0,0,0), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), rgba(0,0,0,0));
@@ -280,7 +296,7 @@ select{
   width: 95%;
   background: #13211ED9;
   margin: 40px auto 40px auto;
-  padding: 10px;
+  padding: 18px;
 
   text-align: left;
   align-items: flex-start;
@@ -293,7 +309,7 @@ select{
     line-height: 40px;
   }
   p {
-    margin: 0 0 0 10px;
+    margin: 0 0 10px 0;
     text-align: justify;
     text-indent: 20px;
     line-height: 1.8;
@@ -301,7 +317,7 @@ select{
   b {
     margin: 10px 0 10px 0;
   }
-  a i, li i {
+  p i, a i, li i {
     color: $wordsColor1;
   }
   & ul{

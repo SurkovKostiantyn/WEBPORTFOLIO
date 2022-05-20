@@ -142,5 +142,4 @@ in css file:
         <a href="https://webportfolio.com.ua/?page=login" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check this page</a><br>
         <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/index/login.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;And github</a>
     </p>
-    <hr>
 </div>

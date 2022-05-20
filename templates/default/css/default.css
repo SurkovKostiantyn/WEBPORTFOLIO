@@ -1,8 +1,10 @@
 pre {
+  max-width: 300px;
+  display: block;
   color: #ff771a;
   margin-left: 10px;
   text-align: left;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 * {
@@ -20,9 +22,8 @@ a:hover, a .active {
 }
 
 hr {
-  width: 100%;
-  margin-top: 10px;
-  height: 4px;
+  width: 90%;
+  height: 6px;
   border: none;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), rgba(0, 0, 0, 0));
 }
@@ -225,7 +226,7 @@ form > button {
   background: #f2e5ec;
 }
 
-select {
+.button-css {
   text-align: center;
   display: block;
   font-size: 1em;
@@ -245,37 +246,28 @@ select {
   appearance: none;
   background: none;
 }
-select::-ms-expand {
+.button-css::-ms-expand {
   display: none;
 }
-select:hover {
+.button-css:hover {
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to right bottom, rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), #00000000, #00000000, #00000000, #00000000, #00000000, rgba(211, 89, 255, 0.5), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), #00000000, #00000000, #00000000, #00000000, #00000000, rgba(211, 89, 255, 0.5), rgba(0, 200, 83, 0.5));
 }
-select:focus {
+.button-css:focus {
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to right bottom, rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), #00000000, #00000000, #00000000, #00000000, #00000000, rgba(211, 89, 255, 0.5), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), #00000000, #00000000, #00000000, #00000000, #00000000, rgba(211, 89, 255, 0.5), rgba(0, 200, 83, 0.5));
   outline: none;
 }
-select > option {
+.button-css > option {
   text-align: left;
   font-weight: 500;
   color: #0d1a13;
 }
-select > option > :hover {
+.button-css > option > :hover {
   background-color: #00c853;
   color: #f2e5ec;
-}
-
-.result {
-  font-size: 1.2em;
-  text-align: left;
-  padding: 0.5em 1.5em;
-  width: auto;
-  box-sizing: border-box;
-  margin-top: 10px;
 }
 
 .content {
@@ -293,8 +285,11 @@ select > option > :hover {
   border-image-slice: 1;
   border-image-source: linear-gradient(to right bottom, rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), #00000000, #00000000, #00000000, #00000000, #00000000, rgba(211, 89, 255, 0.5), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), #00000000, #00000000, #00000000, #00000000, #00000000, rgba(211, 89, 255, 0.5), rgba(0, 200, 83, 0.5));
 }
-.content > * {
-  margin: 10px;
+.content > :not(a) {
+  margin: 10px 20px 0 20px;
+}
+.content > a {
+  margin: 0 20px;
 }
 .content > h3 {
   line-height: 40px;
@@ -313,6 +308,7 @@ select > option > :hover {
 .content ul li {
   text-align: justify;
   list-style-type: none;
+  margin: 5px 0 5px 0;
 }
 .content ul li ul {
   margin-left: 20px;

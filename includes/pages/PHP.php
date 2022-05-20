@@ -25,7 +25,7 @@
         </li>
     </ul>
     <b>Result:</b>
-    <select class="select-css" name="formats" size="1" id="lesson1" onChange="update();">
+    <select class="button-css" name="formats" size="1" id="lesson1" onChange="update();">
         <option value="Y - m - d" selected  >2022 - 01 - 01</option>
         <option value="Y / m / d"           >2022 / 01 / 01</option>
         <option value="d.m.Y"               >01.01.2022</option>
@@ -34,7 +34,7 @@
         <option value="r"                   >RFC 2822</option>
         <option value="c"                   >ISO 8601</option>
     </select>
-    <a id="date" class="result"></a>
+<pre id="date"></pre>
     <hr>
     <h3 style="width: 100%">Lesson 2</h3>
     <b>Presentation:</b>
@@ -64,7 +64,6 @@
             Вам будет предоставлен ассоциативный массив, представляющий данные о разработчиках, которые подписались на участие в следующей встрече программистов, где вы организатор. Ваша задача — вернуть массив, который включает количество языков программирования, представленных на встрече.
             Дано:<br>
 <pre>
-&lt;?php
 $list1 = [
     [
         "first_name" => "Noah",
@@ -99,17 +98,14 @@ $list1 = [
         "language" => "C"
     ]
 ];
-?&gt;
 </pre>
-            Ваша функция должна возвращать следующий ассоциативный массив:
+    Ваша функция должна возвращать следующий ассоциативный массив:
 <pre>
-&lt;?php
-    [
-        "C" => 2,
-        "JavaScript" => 1,
-        "Ruby" => 1
-    ]
-?&gt;
+[
+    "C" => 2,
+    "JavaScript" => 1,
+    "Ruby" => 1
+]
 </pre>
         </li>
         <li>
@@ -125,6 +121,45 @@ $list1 = [
 </pre>
         </li>
     </ul>
+    <b>Result:</b>
+    <p>Задание №1.</p>
+<pre>
+Для справки: в 1 с - 1000 мс.
+</pre>
+<button class="button-css" id="task1btn" onclick="btnUpdate();"></button>
+<pre id="task1"></pre>
+    <p>Задание №2.</p>
+    <textarea class="button-css" placeholder="Type some words (only English)" id="task2input" type="text"></textarea>
+    <button class="button-css" type="button" onclick="CountingDuplicates();">PRESS ME</button>
+    <pre id="task2" class="result">Answer will appear this row</pre>
+    <p>Задание №3.</p>
+    <input class="button-css" maxlength="10" id="input3" title="Only digits like 0661259997" placeholder="Enter phone number" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
+    <button class="button-css" type="button" onclick="showNumber();">PRESS ME</button>
+    <pre id="task3">Answer will appear this row</pre>
+    <p>Задание №4.</p>
+<pre>
+<?php $Lessons->lesson1task4(); ?>
+</pre>
+<b>Just used that:</b>
+<pre>
+$counts = array_count_values(
+    array_column( $list1, 'language')
+);
+print_r($counts);
+</pre>
+    <p>Задание №5.</p>
+<pre>
+<?= $Lessons->getLikes(0); ?><br>
+<?= $Lessons->getLikes(1); ?><br>
+<?= $Lessons->getLikes(2); ?><br>
+<?= $Lessons->getLikes(3); ?><br>
+<?= $Lessons->getLikes(4); ?><br>
+<?= $Lessons->getLikes(25);?><br>
+</pre>
+<hr>
+    <h3 style="width: 100%">Lesson 3</h3>
+    <b>Presentation:</b>
+    <p>26.05.2022</p>
 </div>
 <script>
     window.onload = function(){update()};
@@ -142,4 +177,71 @@ $list1 = [
             }
         });
     }
+    let task1timer = setInterval(getTime, 1);
+
+    function getTime(){
+        let task1 = document.getElementById('task1');
+        let date = new Date();
+
+        let h = date.getHours(), m = date.getMinutes(), s = date.getSeconds(), ms = date.getMilliseconds();
+        let pass = ms + (s * 1000) + (m * 60 + 1000) + (h * 60 * 60 * 1000);
+        task1.innerHTML = 'С полуночи прошло ' + pass + 'ms<br>' +
+            '(' + h + 'h ' + m + 'm ' + s + 's ' + ms + 'ms)<br>' +
+            h + 'h = ' + (h * (3600 * 1000)) + ' ms<br>' +
+            m + 'm = ' + (m * (60 * 1000)) + ' ms<br>' +
+            s + 's = ' + (s * 1000) + ' ms<br>' +
+            ms + 'ms<br>';
+    }
+    function btnUpdate(){
+        let btn =  document.getElementById('task1btn');
+        let btnName;
+        if(task1timer){
+            clearInterval(task1timer);
+            task1timer = false;
+            btnName = 'START IT';
+        }
+        else{
+            task1timer = setInterval(getTime, 1);
+            btnName = 'STOP IT';
+        }
+        btn.innerHTML = btnName;
+    }
+
+    function CountingDuplicates(){
+        let a = document.getElementById('task2');
+        let text = document.getElementById('task2input');
+
+        if(!text.value)
+            text.value = "Type some words";
+
+        $.ajax({
+            url: '/includes/ajax/ajax.php',
+            method: 'post',
+            dataType: 'html',
+            data: {string: text.value},
+            success: function (data) {
+                a.innerHTML = data;//string + " " + text.value.length + data;
+            }
+        });
+    }
+
+    function showNumber(){
+        let phoneNumber = document.getElementById('input3').value;
+        if(phoneNumber.length < 10){
+            document.getElementById('task3').innerHTML = 'Please, type correct tel number (10 dig).';
+        }else {
+            $.ajax({
+                url: '/includes/ajax/ajax.php',
+                method: 'post',
+                dataType: 'html',
+                data: {num: phoneNumber},
+                success: function (data) {
+                    document.getElementById('task3').innerHTML = data;
+                }
+            });
+        }
+    }
+
+    getTime();
+    btnUpdate();
 </script>

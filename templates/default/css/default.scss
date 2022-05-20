@@ -13,10 +13,12 @@ $quantity: 15;
 }
 
 pre{
+  max-width: 300px;
+  display: block;
   color: #ff771a;
   margin-left: 10px;
   text-align: left;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 @mixin borders($width){
@@ -58,9 +60,8 @@ a{
 }
 
 hr{
-  width: 100%;
-  margin-top: 10px;
-  height: 4px;
+  width: 90%;
+  height: 6px;
   border: none;
   background-image: linear-gradient(
           to right,
@@ -263,7 +264,7 @@ form {
   }
 }
 
-select{
+.button-css{
   text-align: center;
   display: block;
   font-size: $fontSize;
@@ -301,15 +302,6 @@ select{
   }
 }
 
-.result{
-  font-size: fontsize($fontSize, 1.2);
-  text-align: left;
-  padding: 0.5em 1.5em;
-  width: auto;
-  box-sizing: border-box;
-  margin-top: 10px;
-}
-
 .content{
   flex: 1 0 auto;
   margin: 40px auto;
@@ -322,10 +314,12 @@ select{
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  > * {
-    margin: 10px;
+  > :not(a) {
+    margin: 10px 20px 0 20px;
   }
-
+  > a {
+    margin: 0 20px;
+  }
   @include borders(2px);
   & > h3 {
     line-height: 40px;
@@ -343,6 +337,7 @@ select{
     & li {
       text-align: justify;
       list-style-type: none;
+      margin: 5px 0 5px 0;
     }
     li ul{
       margin-left: 20px;

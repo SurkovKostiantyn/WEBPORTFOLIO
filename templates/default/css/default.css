@@ -1,3 +1,10 @@
+pre {
+  color: #ff771a;
+  margin-left: 10px;
+  text-align: left;
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +56,7 @@ hr {
 */
 html, body {
   width: 100%;
-  min-width: 350px;
+  min-width: 300px;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -273,11 +280,10 @@ select > option > :hover {
 
 .content {
   flex: 1 0 auto;
-  max-width: 1000px;
-  width: 95%;
-  background: #13211ED9;
-  margin: 40px auto 40px auto;
-  padding: 18px;
+  margin: 40px auto;
+  max-width: min(1000px, 100% - 40px);
+  min-width: min(100% - 40px, 1000px);
+  background: rgba(13, 26, 19, 0.9);
   text-align: left;
   align-items: flex-start;
   display: flex;
@@ -287,17 +293,16 @@ select > option > :hover {
   border-image-slice: 1;
   border-image-source: linear-gradient(to right bottom, rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), #00000000, #00000000, #00000000, #00000000, #00000000, rgba(211, 89, 255, 0.5), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), #00000000, #00000000, #00000000, #00000000, #00000000, rgba(211, 89, 255, 0.5), rgba(0, 200, 83, 0.5));
 }
+.content > * {
+  margin: 10px;
+}
 .content > h3 {
   line-height: 40px;
 }
 .content p {
-  margin: 0 0 10px 0;
   text-align: justify;
   text-indent: 20px;
   line-height: 1.8;
-}
-.content b {
-  margin: 10px 0 10px 0;
 }
 .content p i, .content a i, .content li i {
   color: #00c853;

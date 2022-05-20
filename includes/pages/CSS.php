@@ -91,7 +91,7 @@
     </p>
     <p>
         2. Подключить с Google fonts любой на ваш выбор:
-    <pre style="color: #ff771a; text-align: left;">
+    <pre>
 in css file:
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');</pre>

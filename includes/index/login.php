@@ -107,6 +107,7 @@ mysqli_close($con);
                required>
         <button type="submit">Sign Up</button>
     </form>
+    <hr>
     <h3 style="width: 100%;">Authorization: you already have an account</h3>
     <form method="post">
         <label for="username"></label>

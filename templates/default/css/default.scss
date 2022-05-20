@@ -12,6 +12,13 @@ $quantity: 15;
   @return $size * $amount;
 }
 
+pre{
+  color: #ff771a;
+  margin-left: 10px;
+  text-align: left;
+  overflow-x: hidden;
+}
+
 @mixin borders($width){
   border: $width solid;
   border-image-slice: 1;
@@ -92,7 +99,7 @@ hr{
 
 html, body {
   width: 100%;
-  min-width: 350px;
+  min-width: $minWidth;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -305,30 +312,28 @@ select{
 
 .content{
   flex: 1 0 auto;
-  max-width: 1000px;
-  width: 95%;
-  background: #13211ED9;
-  margin: 40px auto 40px auto;
-  padding: 18px;
+  margin: 40px auto;
+  max-width: min(1000px, calc(100% - 40px));
+  min-width: min(calc(100% - 40px), 1000px);//$minWidth;
+  background: transparentize($bgColor, 0.1);
 
   text-align: left;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  > * {
+    margin: 10px;
+  }
 
   @include borders(2px);
   & > h3 {
     line-height: 40px;
   }
   p {
-    margin: 0 0 10px 0;
     text-align: justify;
     text-indent: 20px;
     line-height: 1.8;
-  }
-  b {
-    margin: 10px 0 10px 0;
   }
   p i, a i, li i {
     color: $wordsColor1;

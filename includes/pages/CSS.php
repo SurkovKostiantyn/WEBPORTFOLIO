@@ -1,5 +1,5 @@
 <div class="content">
-    <h3>Lesson 1</h3>
+    <h3 style="width: 100%">Lesson 1</h3>
     <b>Presentation:</b>
     <a href="https://docs.google.com/presentation/d/1aQ3259RRkgqpwmGR603r5dNrPVQcuq3fE26gv8xraPY/edit?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Google Disk</a>
     <b>Recommended links:</b>
@@ -34,8 +34,8 @@
     </ul>
     <b>Result:</b>
     <a href="https://webportfolio.com.ua"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;This website</a>
-    <hr style="width: 100%; margin-top: 10px;">
-    <h3>Lesson 2</h3>
+    <hr>
+    <h3 style="width: 100%">Lesson 2</h3>
     <b>Presentation:</b>
     <a href="https://docs.google.com/presentation/d/1Tzlw6Yx7Re2ZcHoO8xLbwIXk1roWOA1i2DTFpP_2wu0/edit#slide=id.ged9c400de9_0_79" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Google Disk</a>
     <b>Recommended links:</b>
@@ -77,6 +77,7 @@
         </li>
     </ul>
     <b>Result:</b>
+    <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/CSS.php"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;At first check github</a>
     <p>
         1. Tags br, b, em, sup, i, strong, hr<br>
 
@@ -139,7 +140,7 @@ in css file:
         <i class="fa fa-plus" aria-hidden="true"></i>&NonBreakingSpace;Email (Обязательное, должно содержать только email);<br>
         <i class="fa fa-plus" aria-hidden="true"></i>&NonBreakingSpace;Password (Обязательное, должно содержать только пароль, минимум 8 символов)<br>
         <a href="https://webportfolio.com.ua/?page=login" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check this page</a><br>
-        <a href="https://webportfolio.com.ua/?page=login" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;And github</a>
+        <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/index/login.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;And github</a>
     </p>
-    <hr style="width: 100%; margin-top: 10px;">
+    <hr>
 </div>

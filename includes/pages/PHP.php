@@ -1,5 +1,5 @@
 <div class="content">
-    <h3 style="width: 100%">Lesson 1</h3>
+    <h3>Lesson 1</h3>
     <b>Presentation:</b>
     <a href="https://docs.google.com/presentation/d/1vStwVV_O-Ydzg9oo4fAwOq3tqDCdNf3ucCLevCqEsJQ/edit?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Google Disk</a>
     <b>Материал урока:</b>
@@ -36,7 +36,7 @@
     </select>
 <pre id="date"></pre>
     <hr>
-    <h3 style="width: 100%">Lesson 2</h3>
+    <h3>Lesson 2</h3>
     <b>Presentation:</b>
     <a href="https://drive.google.com/file/d/17JDIiRgV1_MHxcnPam8InS4akKl97f9J/view?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Google Disk</a>
     <b>Материал урока:</b>
@@ -126,7 +126,7 @@ $list1 = [
 <pre>
 Для справки: в 1 с - 1000 мс.
 </pre>
-<button class="button-css" id="task1btn" onclick="btnUpdate();"></button>
+    <button class="button-css" id="task1btn" onclick="btnUpdate();"></button>
 <pre id="task1"></pre>
     <p>Задание №2.</p>
     <textarea class="button-css" placeholder="Type some words (only English)" id="task2input" type="text"></textarea>
@@ -140,7 +140,7 @@ $list1 = [
 <pre>
 <?php $Lessons->lesson1task4(); ?>
 </pre>
-<b>Just used that:</b>
+    <b>Just used that:</b>
 <pre>
 $counts = array_count_values(
     array_column( $list1, 'language')
@@ -149,15 +149,25 @@ print_r($counts);
 </pre>
     <p>Задание №5.</p>
 <pre>
-<?= $Lessons->getLikes(0); ?><br>
-<?= $Lessons->getLikes(1); ?><br>
-<?= $Lessons->getLikes(2); ?><br>
-<?= $Lessons->getLikes(3); ?><br>
-<?= $Lessons->getLikes(4); ?><br>
-<?= $Lessons->getLikes(25);?><br>
+<?= $Lessons->getLikes(0); ?>
+<?= $Lessons->getLikes(1); ?>
+<?= $Lessons->getLikes(2); ?>
+<?= $Lessons->getLikes(3); ?>
+<?= $Lessons->getLikes(4); ?>
+<?= $Lessons->getLikes(25);?>
 </pre>
-<hr>
-    <h3 style="width: 100%">Lesson 3</h3>
+    <b>Just used:</b>
+<pre>
+return match ($num) {
+    0 => 'no one likes this',
+    1 => ''.$this->likes[$id][0].' likes this',
+    2 => ''.$this->likes[$id][0].' and '.$this->likes[$id][1].' likes this',
+    3 => ''.$this->likes[$id][0].', '.$this->likes[$id][1].' and '.$this->likes[$id][2].' likes this',
+    default => ''.$this->likes[$id][0].', '.$this->likes[$id][1].' and '.($num - 2).' others likes this'
+};
+</pre>
+    <hr>
+    <h3>Lesson 3</h3>
     <b>Presentation:</b>
     <p>26.05.2022</p>
 </div>

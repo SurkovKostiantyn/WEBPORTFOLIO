@@ -60,18 +60,22 @@ mysqli_close($con);
 ?>
 
 <div class="content">
-    <h3 style="width: 100%;">Registration: you haven't an account</h3>
+    <h3>Registration:</h3>
     <form method="post">
+        <label for="username-reg">Username<sup>*</sup></label>
         <input type="text"
                placeholder="&#xf007; Enter your Username"
+               id="username-reg"
                name="username-reg"
                autocomplete="on"
                title="Username should only contain letters and digits (2-20 symbols)"
                pattern="[A-z]{2,20}"
                required>
+        <label for="email-reg">Email<sup>*</sup></label>
         <input type="text"
                placeholder="&#xf0e0; Enter Email"
                name="email-reg"
+               id="email-reg"
                autocomplete="on"
                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                required>
@@ -91,29 +95,45 @@ mysqli_close($con);
                placeholder="&#xf095; +38(___)-___-__-__"
                name="phone-reg"
                title="Phone number should be in format +38 (123) 456-78-90"
-               pattern="\+38\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+               pattern="\+38\s?[\(]{0,2}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
                autocomplete="on">
+        <label for="password-reg">Password<sup>*</sup></label>
         <input type="password"
                placeholder="&#xF13e; Enter Password"
                name="password-reg"
+               id="password-reg"
                autocomplete="on"
                pattern="(?=^.{8,20}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
                required>
+        <label for="rep-password-reg">Repeat password<sup>*</sup></label>
         <input type="password"
                placeholder="&#xF13e; Repeat Password"
                name="rep-password-reg"
+               id="rep-password-reg"
                autocomplete="on"
                pattern="(?=^.{8,20}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
                required>
-        <button type="submit">Sign Up</button>
+        <label><sup>*</sup> required</label>
+        <button class="button-css" type="submit">Sign Up</button>
     </form>
     <hr>
-    <h3 style="width: 100%;">Authorization: you already have an account</h3>
+    <h3>Authorization:</h3>
     <form method="post">
-        <label for="username"></label>
-        <input type="text" placeholder="&#xf007; Enter login or email" name="username" id="username" autocomplete="on" required>
-        <label for="password"></label>
-        <input type="password" placeholder="&#xF13e; Enter Password" name="password" id="password" autocomplete="on" required>
-        <button type="submit">Log in</button>
+        <label for="username">Username<sup>*</sup></label>
+        <input type="text"
+               placeholder="&#xf007; Enter login or email"
+               name="username"
+               id="username"
+               autocomplete="on"
+               required>
+        <label for="password">Password<sup>*</sup></label>
+        <input type="password"
+               placeholder="&#xF13e; Enter Password"
+               name="password"
+               id="password"
+               autocomplete="on"
+               required>
+        <label><sup>*</sup> required</label>
+        <button class="button-css" type="submit">Log in</button>
     </form>
 </div>

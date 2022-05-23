@@ -8,17 +8,32 @@ $fontSize: 1.0em;
 $minWidth: 300px;
 $quantity: 15;
 
-@function fontsize($size, $amount){
-  @return $size * $amount;
+@function fontsize($amount){
+  @return $fontSize * $amount;
 }
 
-pre{
-  max-width: 300px;
+pre, li pre{
   display: block;
   color: #ff771a;
-  margin-left: 10px;
   text-align: left;
   overflow-x: auto;
+  ::-webkit-scrollbar {
+    height: 0.5em;
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px $bgColor;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, $wordsColor1, $wordsColor2);
+  }
+}
+pre {
+  max-width: calc(100% - 40px);
+  margin: 10px 20px;
+}
+li pre{
+  max-width: 100%;
+  margin: 10px 0;
 }
 
 @mixin borders($width){
@@ -60,7 +75,7 @@ a{
 }
 
 hr{
-  width: 90%;
+  width: 100%;
   height: 6px;
   border: none;
   background-image: linear-gradient(
@@ -69,7 +84,9 @@ hr{
           transparentize($wordsColor1, 0.5),
           transparentize($wordsColor2, 0.5),
           rgba(0, 0, 0, 0));
+  margin: 10px 0;
 }
+
 /*
 [data-navtooltip]{
   cursor: pointer;
@@ -118,6 +135,15 @@ html, body {
   line-height: 20px;
   font-size: 1.0em;
   color: $textColor;
+  ::-webkit-scrollbar {
+    width: 0.7em;
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px $bgColor;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to left bottom, $wordsColor1, $wordsColor2);
+  }
 }
 
 header{
@@ -125,22 +151,6 @@ header{
     padding: 40px;
     font-size: min(70px, max(30px, 6.0vw));
     background: linear-gradient(to right, rgba(0,0,0,0), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), rgba(0,0,0,0));
-  }
-}
-
-table{
-  margin: 10px;
-  border-collapse: collapse;
-  td, th {
-    border: 1px solid white;
-    text-align: center;
-    padding: 8px;
-  }
-  th{
-    color: $wordsColor1;
-  }
-  td{
-    color: $wordsColor2;
   }
 }
 
@@ -240,8 +250,17 @@ input#_1{
 
 form {
   display: flex;
-  width: 100%;
+  margin: auto;
   flex-direction: column;
+  & label {
+    text-align: left;
+    font-size: fontsize(.7);
+    line-height: .6;
+    & sup{
+      color: $wordsColor2;
+      font-size: fontsize(1.3);
+    }
+  }
   & > input {
     width: 200px;
     margin: 8px auto;
@@ -251,6 +270,10 @@ form {
     font-family: Arial, FontAwesome, serif;
     border: none;
     background: $textColor;
+    &:focus, :active {
+      border: none;
+      outline: solid 2px $wordsColor1;
+    }
   }
   & > button {
     width: 212px;
@@ -276,7 +299,7 @@ form {
   width: auto;
   box-sizing: border-box;
   margin: 0;
-  @include borders(1px);
+  @include borders(2px);
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -285,10 +308,15 @@ form {
     display: none;
   }
   &:hover{
-    @include borders(1px);
+    @include borders(2px);
+    background: linear-gradient(to right bottom,
+                transparentize($wordsColor1, 0.7),
+                transparentize($wordsColor2, 0.7)
+    ) no-repeat center center;
+    background-size: 100% 100%;
   }
   &:focus {
-    @include borders(1px);
+    @include borders(2px);
     outline: none;
   }
   & > option {
@@ -305,6 +333,7 @@ form {
 .content{
   flex: 1 0 auto;
   margin: 40px auto;
+  padding-bottom: 10px;
   max-width: min(1000px, calc(100% - 40px));
   min-width: min(calc(100% - 40px), 1000px);//$minWidth;
   background: transparentize($bgColor, 0.1);
@@ -314,14 +343,18 @@ form {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  > :not(a) {
-    margin: 10px 20px 0 20px;
+  &:last-child{
+    margin-bottom: 10px;
   }
-  > a {
+  & > p, b {
+    margin: 10px 20px;
+  }
+  & > a, ul{
     margin: 0 20px;
   }
   @include borders(2px);
   & > h3 {
+    width: 100%;
     line-height: 40px;
   }
   p {
@@ -329,10 +362,14 @@ form {
     text-indent: 20px;
     line-height: 1.8;
   }
-  p i, a i, li i {
+  p i, a i, li i, b i {
     color: $wordsColor1;
   }
+  .button-css{
+    margin: 10px 20px;
+  }
   & ul{
+    max-width: calc(100% - 40px);
     list-style-type: none;
     & li {
       text-align: justify;
@@ -370,6 +407,21 @@ form {
   }
 }
 
+table{
+  margin: 10px 20px;
+  border-collapse: collapse;
+  td, th {
+    border: 1px solid white;
+    text-align: center;
+    padding: 8px;
+  }
+  th{
+    color: $wordsColor1;
+  }
+  td{
+    color: $wordsColor2;
+  }
+}
 
 footer{
   flex: 0 0 auto;

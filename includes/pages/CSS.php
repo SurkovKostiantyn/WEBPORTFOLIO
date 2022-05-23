@@ -1,5 +1,5 @@
 <div class="content">
-    <h3 style="width: 100%">Lesson 1</h3>
+    <h3>Lesson 1</h3>
     <b>Presentation:</b>
     <a href="https://docs.google.com/presentation/d/1aQ3259RRkgqpwmGR603r5dNrPVQcuq3fE26gv8xraPY/edit?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Google Disk</a>
     <b>Recommended links:</b>
@@ -35,7 +35,7 @@
     <b>Result:</b>
     <a href="https://webportfolio.com.ua"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;This website</a>
     <hr>
-    <h3 style="width: 100%">Lesson 2</h3>
+    <h3>Lesson 2</h3>
     <b>Presentation:</b>
     <a href="https://docs.google.com/presentation/d/1Tzlw6Yx7Re2ZcHoO8xLbwIXk1roWOA1i2DTFpP_2wu0/edit#slide=id.ged9c400de9_0_79" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Google Disk</a>
     <b>Recommended links:</b>
@@ -62,7 +62,7 @@
             <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Cверстать 2 страницы с формами<br>
         </li>
         <li>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Добавить валидацию с такими правилами:
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Добавить валидацию со следующими правилами:
             <ul>
                 <li>
                     <i class="fa fa-check" aria-hidden="true"></i>&NonBreakingSpace;Email (Обязательное, должно содержать только email);
@@ -73,7 +73,7 @@
             </ul>
         </li>
         <li>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Потренироваться с полями select и textarea и разными видами инпутов в html5
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Потренироваться с использованием полей select и textarea и разными видами инпутов в html5
         </li>
     </ul>
     <b>Result:</b>
@@ -95,7 +95,6 @@
 in css file:
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');</pre>
-    </p>
     <p>
         3. Добавить таблицу, которая будет нести в себе thead, tbody, tfoot и попробовать объединить колонки друг с другом:
     <table>
@@ -142,4 +141,10 @@ in css file:
         <a href="https://webportfolio.com.ua/?page=login" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check this page</a><br>
         <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/index/login.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;And github</a>
     </p>
+    <hr>
+    <h3>Lesson 3</h3>
+    <b>Presentation:</b>
+    <b>Recommended links:</b>
+    <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;HomeTask:</b>
+    <b>Result:</b>
 </div>

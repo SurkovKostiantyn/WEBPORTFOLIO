@@ -14,22 +14,30 @@ if(isset($_POST['num'])){
 }
 
 if(isset($_POST['string'])){
-    $count = array_count_values(str_split($_POST['string']));
-    $count_keys = array_keys($count);
-    $count_values = array_values($count);
 
-    $matches = '';
+    $start = $_POST['string'];
 
-    for($i=0; $i < count($count_keys); $i++) {
-        if($count_keys[$i] === ' ' || $count_keys[$i] === '')
+    print_r("Start string: ".$start."\nMatches:\n");
+
+    foreach (mb_count_chars($start, 1) as $i => $val) {
+        if($val > 1 && $i !== ' ' && $i !== '')
+            echo "Symbol '".$i."' $val times.\n";
+        else
             continue;
-        if($count_values[$i] == 1)
-            continue;
-        $matches .= 'char '.$count_keys[$i].' : '.$count_values[$i].' times <br>';
     }
-    if($matches)
-        echo 'Matches:<br>'.$matches;
-    else echo 'No matches found!';
+}
+
+function mb_count_chars($input): array
+{
+    $l = mb_strlen($input, 'UTF-8');
+    $unique = array();
+    for($i = 0; $i < $l; $i++) {
+        $char = mb_substr($input, $i, 1, 'UTF-8');
+        if(!array_key_exists($char, $unique))
+            $unique[$char] = 0;
+        $unique[$char]++;
+    }
+    return $unique;
 }
 
 if(isset($_POST['id']) && isset($_POST['tickID']) && isset($_POST['status'])){
@@ -54,3 +62,4 @@ if(isset($_POST['id']) && isset($_POST['tickID']) && isset($_POST['status'])){
         }
     }
 }
+

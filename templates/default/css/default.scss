@@ -147,10 +147,20 @@ html, body {
 }
 
 header{
-  h1{
+  .site-header{
     padding: 40px;
     font-size: min(70px, max(30px, 6.0vw));
     background: linear-gradient(to right, rgba(0,0,0,0), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), rgba(0,0,0,0));
+    &:before{
+      content: "<";
+      color: $wordsColor2;
+      font-size: min(70px, max(30px, 6.0vw));
+    }
+    &:after{
+      content: "/>";
+      color: $wordsColor1;
+      font-size: min(70px, max(30px, 6.0vw));
+    }
   }
 }
 
@@ -168,8 +178,7 @@ nav{
   .responsive a { // all elements
     cursor: pointer;
     float: left;
-    padding: 12px;
-
+    margin: 12px;
   }
   .responsive a:last-of-type{ // menu
     display: none;
@@ -177,13 +186,13 @@ nav{
   .responsive a:nth-of-type(-n+2){
     width: 45px;
     min-width: 45px;
-    padding: 12px 0 12px 0;
+    margin: 12px 0 12px 0;
   }
   .responsive a:nth-last-of-type(-n+4){ // last 4 elements
       float: right;
       width: 45px;
       min-width: 45px;
-      padding: 12px 0 12px 0;
+    margin: 12px 0 12px 0;
   }
 }
 
@@ -204,7 +213,6 @@ nav{
   }
   nav .responsive a:nth-of-type(n+3):nth-last-of-type(n+5) { // elements from 3 to 8
     display: none;
-    padding: 12px;
     text-align: left;
   }
   nav .responsive a:last-of-type{ // menu

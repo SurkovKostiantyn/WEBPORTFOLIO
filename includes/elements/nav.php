@@ -11,7 +11,7 @@
         <?= $Engine->getMenuList(); ?>
 
         <?php if (isset($_SESSION['username'])): ?>
-            <a href="/includes/logout.php" >
+            <a href="/includes/logout.php">
                 <i data-navtooltip="Exit" class="fa fa-sign-out" aria-hidden="true"></i>
             </a>
         <?php else: ?>
@@ -26,7 +26,7 @@
             <i data-navtooltip="Cart" class="fa-solid fa-cart-shopping"></i>
         </a>
 
-        <a style="padding: 0;">
+        <a style="margin: 0;">
             <label class="collapse" for="_1">
                 <svg id ="toggleActive" class="ham hamRotate ham1" viewBox="0 0 100 100"  width="40" height="39" onclick="this.classList.toggle('active')">
                     <path

@@ -164,7 +164,7 @@ $list1 = [
     </select>
 <pre id="task1a"></pre>
     <p>Задание №2.</p>
-    <textarea class="button-css" placeholder="Type some words (only English)" id="task2input" type="text"></textarea>
+    <textarea class="button-css" placeholder="Type some words there" id="task2input" type="text"></textarea>
     <button class="button-css" type="button" onclick="CountingDuplicates();">PRESS ME</button>
     <pre id="task2" class="result">Answer will appear this row</pre>
     <p>Задание №3.</p>

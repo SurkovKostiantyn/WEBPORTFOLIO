@@ -102,10 +102,20 @@ html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
   background: linear-gradient(to left bottom, #00c853, #d359ff);
 }
 
-header h1 {
+header .site-header {
   padding: 40px;
   font-size: min(70px, max(30px, 6vw));
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), rgba(0, 0, 0, 0));
+}
+header .site-header:before {
+  content: "<";
+  color: #d359ff;
+  font-size: min(70px, max(30px, 6vw));
+}
+header .site-header:after {
+  content: "/>";
+  color: #00c853;
+  font-size: min(70px, max(30px, 6vw));
 }
 
 nav {
@@ -123,7 +133,7 @@ nav .responsive {
 nav .responsive a {
   cursor: pointer;
   float: left;
-  padding: 12px;
+  margin: 12px;
 }
 nav .responsive a:last-of-type {
   display: none;
@@ -131,13 +141,13 @@ nav .responsive a:last-of-type {
 nav .responsive a:nth-of-type(-n+2) {
   width: 45px;
   min-width: 45px;
-  padding: 12px 0 12px 0;
+  margin: 12px 0 12px 0;
 }
 nav .responsive a:nth-last-of-type(-n+4) {
   float: right;
   width: 45px;
   min-width: 45px;
-  padding: 12px 0 12px 0;
+  margin: 12px 0 12px 0;
 }
 
 .sticky {
@@ -159,7 +169,6 @@ nav .responsive a:nth-last-of-type(-n+4) {
 
   nav .responsive a:nth-of-type(n+3):nth-last-of-type(n+5) {
     display: none;
-    padding: 12px;
     text-align: left;
   }
 

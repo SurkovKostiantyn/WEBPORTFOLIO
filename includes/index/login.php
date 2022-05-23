@@ -51,7 +51,8 @@ if (isset($_POST['username'])) {
         $data = mysqli_fetch_array($result);
         $_SESSION['id'] = $data['id'];
         $_SESSION['username'] = $username;
-        header("Location: index.php");
+        //header("Location: https://webportfolio.com.ua");
+        echo "<script> window.location.replace('index.php') </script>";
     } else {
         echo "<div id='incorrect'></div>";
     }

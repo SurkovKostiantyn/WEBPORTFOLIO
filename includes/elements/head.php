@@ -5,9 +5,6 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <link rel="shortcut icon" href="data:;base64,=">
-<!--
-    <link rel="shortcut icon" href="http://surkov-php.roadtoglory.ru/images/ks.ico" />
--->
     <meta name="description" content="Onix hometasks">
     <meta name="keywords" content="ONIX">
     <meta name="author" content="Surkov K">

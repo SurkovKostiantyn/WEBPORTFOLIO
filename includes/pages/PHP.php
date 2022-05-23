@@ -25,6 +25,8 @@
         </li>
     </ul>
     <b>Result:</b>
+    <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/PHP.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check Github</a>
+
     <select class="button-css" name="formats" size="1" id="lesson1" onChange="update();">
         <option value="Y - m - d" selected  >2022 - 01 - 01</option>
         <option value="Y / m / d"           >2022 / 01 / 01</option>
@@ -122,6 +124,8 @@ $list1 = [
         </li>
     </ul>
     <b>Result:</b>
+    <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/PHP.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check Github</a>
+
     <p>Задание №1.</p>
 <pre>
 Для справки: в 1 с - 1000 мс.

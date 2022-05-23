@@ -4,6 +4,18 @@ if(isset($_POST['format'])){
     echo 'Hello world!<br>' . date($_POST['format']);
 }
 
+if(isset($_POST['timezone'])){
+    $current_time_seconds = time();
+    $date = new DateTime();
+    $date->setTimestamp($current_time_seconds);
+    $date->setTimezone(new DateTimeZone(''.$_POST['timezone']));
+    echo "Current time: " . $date->format('Y-m-d H:i') . "\n";
+    $date->modify('today midnight');
+    $seconds_since_midnight = $current_time_seconds - $date->getTimestamp();
+    echo "Seconds since midnight: ".$seconds_since_midnight;
+}
+
+
 if(isset($_POST['num'])){
     $output = sprintf("(%s) %s %s %s",
         substr($_POST['num'], 0, 3),

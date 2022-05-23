@@ -127,11 +127,42 @@ $list1 = [
     <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/PHP.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check Github</a>
 
     <p>Задание №1.</p>
+    <b>Method #1 (JS)</b>
 <pre>
 Для справки: в 1 с - 1000 мс.
 </pre>
     <button class="button-css" id="task1btn" onclick="btnUpdate();"></button>
 <pre id="task1"></pre>
+    <b>Method #2 (PHP + AJAX)</b>
+    <select class="button-css" name="timezone" size="1" id="lesson2a" onChange="btnUpdate2();">
+        <option value="Etc/GMT+12">(UTC-12:00) Int Date Line West</option>
+        <option value="Pacific/Midway">(UTC-11:00) Time-11</option>
+        <option value="Pacific/Honolulu">(UTC-10:00) Hawaii</option>
+        <option value="US/Alaska">(UTC-09:00) Alaska</option>
+        <option value="America/Los_Angeles">(UTC-08:00) Pacific Time</option>
+        <option value="US/Arizona">(UTC-07:00) Arizona</option>
+        <option value="America/Managua">(UTC-06:00) Saskatchewan</option>
+        <option value="America/Bogota">(UTC-05:00) Bogota</option>
+        <option value="Canada/Atlantic">(UTC-04:00) Asuncion</option>
+        <option value="Canada/Newfoundland">(UTC-03:00) Brasilia</option>
+        <option value="America/Noronha">(UTC-02:00) Time-02</option>
+        <option value="Atlantic/Azores">(UTC-01:00) Mid-Atlantic-Old</option>
+        <option value="Etc/Greenwich">(UTC-00:00) London</option>
+        <option value="Europe/Brussels">(UTC) Dublin, Lisbon</option>
+        <option value="Europe/Athens" selected>(UTC+02:00) Helsinki, Kyiv</option>
+        <option value="Asia/Kuwait">(UTC+03:00) Istanbul</option>
+        <option value="Asia/Baku">(UTC+04:00) rashka</option>
+        <option value="Asia/Karachi">(UTC+05:00) Islamabad</option>
+        <option value="Asia/Rangoon">(UTC+06:00) Dhaka</option>
+        <option value="Asia/Bangkok">(UTC+07:00) Bangkok, Jakarta</option>
+        <option value="Asia/Hong_Kong">(UTC+08:00) Ulaanbaatar</option>
+        <option value="Asia/Tokyo">(UTC+09:00) Seoul</option>
+        <option value="Australia/Brisbane">(UTC+10:00) Brisbane</option>
+        <option value="Asia/Magadan">(UTC+11:00) New Caledonia</option>
+        <option value="Pacific/Fiji">(UTC+12:00) Auckland, Wellington</option>
+        <option value="Pacific/Tongatapu">(UTC+13:00) Samoa</option>
+    </select>
+<pre id="task1a"></pre>
     <p>Задание №2.</p>
     <textarea class="button-css" placeholder="Type some words (only English)" id="task2input" type="text"></textarea>
     <button class="button-css" type="button" onclick="CountingDuplicates();">PRESS ME</button>
@@ -176,7 +207,7 @@ return match ($num) {
     <p>26.05.2022</p>
 </div>
 <script>
-    window.onload = function(){update()};
+    window.onload = function(){update();btnUpdate2();};
     function update() {
         let select = document.getElementById('lesson1');
         let value = select.options[select.selectedIndex].value;
@@ -191,6 +222,22 @@ return match ($num) {
             }
         });
     }
+
+    function btnUpdate2() {
+        let select = document.getElementById('lesson2a');
+        let value = select.options[select.selectedIndex].value;
+        let output = document.getElementById('task1a');
+        $.ajax({
+            url: 'includes/ajax/ajax.php',
+            method: 'post',
+            dataType: 'html',
+            data: {timezone: value},
+            success: function (data) {
+                output.innerHTML = data;
+            }
+        });
+    }
+
     let task1timer = setInterval(getTime, 1);
 
     function getTime(){

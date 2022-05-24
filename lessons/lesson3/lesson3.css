@@ -25,7 +25,7 @@ body{
     position: absolute;
     content: '';
     background-image: url("logo.png");
-    top: 50px;
+    top: 100px;
     left: 100px;
     width: 180px;
     height: 80px;

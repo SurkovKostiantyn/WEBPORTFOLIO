@@ -386,6 +386,21 @@ form > button {
   color: #f2e5ec;
   border: none;
 }
+.content .article-tab thead tr td.table-checkbox, .content .article-tab tbody tr td.table-checkbox {
+  width: 20px;
+}
+.content .article-tab thead tr td.table-image, .content .article-tab tbody tr td.table-image {
+  width: 50px;
+}
+.content .article-tab thead tr td.table-status, .content .article-tab thead tr td.table-author, .content .article-tab tbody tr td.table-status, .content .article-tab tbody tr td.table-author {
+  width: 60px;
+}
+.content .article-tab thead tr td.table-modified, .content .article-tab tbody tr td.table-modified {
+  width: 100px;
+}
+.content .article-tab thead tr td.table-action, .content .article-tab tbody tr td.table-action {
+  width: 50px;
+}
 .content .article-tab tbody tr td a.table-link i {
   cursor: pointer;
   color: #f2e5ec;

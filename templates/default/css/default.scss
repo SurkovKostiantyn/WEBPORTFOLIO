@@ -415,8 +415,23 @@ form {
     thead tr td, tbody tr td{
       color: $textColor;
       border: none;
+      &.table-checkbox{
+        width: 20px;
+      }
+      &.table-image{
+        width: 50px;
+      }
+      &.table-status, &.table-author{
+        width: 60px;
+      }
+      &.table-modified{
+        width: 100px;
+      }
+      &.table-action{
+        width: 50px;
+      }
     }
-    tbody tr td a.table-link i{
+      tbody tr td a.table-link i{
       cursor: pointer;
       color: $textColor;
       &:hover {

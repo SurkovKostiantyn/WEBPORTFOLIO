@@ -73,11 +73,10 @@ a.logo{
     font-weight: 700;
 }
 
-a.l-logout{
-    margin-top: 40px;
-    margin-left: 40px;
+.div-logo{
+    margin: 40px auto;
     width: calc(100% - 80px);
-    line-height: 100px;
+    max-width: 400px;
 }
 
 header a.active{

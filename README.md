@@ -6,4 +6,5 @@ https://webportfolio.com.ua/?page=PHP
 
 css lessons:
 https://webportfolio.com.ua/?page=CSS
-https://webportfolio.com.ua/lessons/
+
+https://github.com/SurkovKostiantyn/WEBPORTFOLIO/tree/main/lessons

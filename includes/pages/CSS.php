@@ -173,6 +173,6 @@ in css file:
     <pre>Добавлен label, :focus, border</pre>
     <a href="/?page=login" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
     <b>Задание №4</b>
-    <pre>Логотип с позиционированием на главной странице</pre>
-    <a href="/?page=main" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
+    <pre>Логотип с позиционированием</pre>
+    <a href="/lessons/lesson3/logout.html" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
 </div>

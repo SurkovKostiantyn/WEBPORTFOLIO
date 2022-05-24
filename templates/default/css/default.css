@@ -240,7 +240,6 @@ form > input {
   padding: 4px 6px;
   color: #0d1a13;
   text-align: left;
-  font-family: Arial, FontAwesome, serif;
   border: none;
   background: #f2e5ec;
 }
@@ -263,7 +262,6 @@ form > button {
   text-align: center;
   display: block;
   font-size: 1em;
-  font-family: sans-serif;
   font-weight: 500;
   color: #f2e5ec;
   line-height: 1.3;
@@ -357,6 +355,45 @@ form > button {
 .content ul li ul {
   margin-left: 20px;
 }
+.content .article-elements {
+  width: calc(100% - 40px);
+  margin: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.content .article-tab {
+  width: calc(100% - 40px);
+  table-layout: fixed;
+  overflow-wrap: break-word;
+  margin: 10px 20px;
+  font-size: 0.7em;
+  font-weight: 100;
+  border: none;
+}
+.content .article-tab thead {
+  font-stretch: extra-condensed;
+}
+.content .article-tab tbody tr:nth-child(2n+1) {
+  background: rgba(0, 200, 83, 0.1);
+}
+.content .article-tab tbody tr:nth-child(2n) {
+  background: rgba(211, 89, 255, 0.1);
+}
+.content .article-tab thead tr, .content .article-tab tbody tr {
+  border-bottom: 1px solid rgba(242, 229, 236, 0.2);
+}
+.content .article-tab thead tr td, .content .article-tab tbody tr td {
+  color: #f2e5ec;
+  border: none;
+}
+.content .article-tab tbody tr td a.table-link i {
+  cursor: pointer;
+  color: #f2e5ec;
+}
+.content .article-tab tbody tr td a.table-link i:hover {
+  color: #d359ff;
+  transition: 0.2s;
+}
 .content .todoList {
   min-width: 100%;
   display: flex;
@@ -385,6 +422,11 @@ form > button {
   background: rgba(13, 26, 19, 0.4);
 }
 
+@media screen and (max-width: 680px) {
+  .table-title, .table-status, .table-modified {
+    display: none;
+  }
+}
 table {
   margin: 10px 20px;
   border-collapse: collapse;
@@ -398,7 +440,7 @@ table th {
   color: #00c853;
 }
 table td {
-  color: #d359ff;
+  color: #f2e5ec;
 }
 
 footer {
@@ -472,6 +514,10 @@ footer p.copyright {
 
 .ham1.active .bottom {
   stroke-dashoffset: -138px;
+}
+
+input, .button-css {
+  font-family: Arial, FontAwesome, serif;
 }
 
 /*# sourceMappingURL=default.css.map */

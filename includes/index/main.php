@@ -16,6 +16,76 @@
         This site created with using PHP, CSS and simple examples of JS. Realisation of some elements of this site you can find on links below. This links contains a lot of code examples
         that explain chosen way how to write each element of site.
     </p>
+
+    <div class="article-elements">
+        <input class="button-css"
+               type="search"
+               id="site-search"
+               name="q"
+               placeholder="&#xf002; Write your request..">
+        <?php
+        if(isset($_SESSION['username'])) {
+            echo "<input type='button' class='button-css add' value='&#xf067; Add New Article'>";
+        }
+        ?>
+    </div>
+
+    <table class="article-tab">
+        <thead>
+            <tr>
+                <td class="table-checkbox">
+                    <input class="custom-checkbox" type="checkbox">
+                </td>
+                <td class="table-image">
+                    IMAGE
+                </td>
+                <td class="table-title">
+                    TITLE
+                </td>
+                <td class="table-author">
+                    AUTHOR
+                </td>
+                <td class="table-modified">
+                    LAST MODIFIED
+                </td>
+                <td class="table-status">
+                    STATUS
+                </td>
+                <td class="table-action">
+                    ACTION
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+        <?php for($i = 0; $i < 10; $i++): ?>
+            <tr>
+                <td class="table-checkbox">
+                    <input class="custom-checkbox" type="checkbox">
+                </td>
+                <td class="table-image">
+                    <img height="32" src="/files/bob.png">
+                </td>
+                <td class="table-title">
+                    Lorem ipsum dolor sit amet
+                </td>
+                <td class="table-author">
+                    John Doe
+                </td>
+                <td class="table-modified">
+                    12/34/5678
+                </td>
+                <td class="table-status">
+                    Published
+                </td>
+                <td class="table-action">
+                    <a class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                    <a class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        <?php endfor; ?>
+        </tbody>
+    </table>
+
     <div class="todoList">
     <?php
         if(isset($_SESSION['id']))

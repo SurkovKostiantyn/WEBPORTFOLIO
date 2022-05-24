@@ -144,7 +144,24 @@ in css file:
     <hr>
     <h3>Lesson 3</h3>
     <b>Presentation:</b>
+    <a href="https://docs.google.com/presentation/d/1tuExqWeT-A2fCb_6LlVP8Dhv3cCMtd0L5lneed1CLyY/edit#slide=id.p" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Google Disk</a>
     <b>Recommended links:</b>
+    <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;CSS basics</a>
+    <a href="https://htmlacademy.ru/blog/boost/tools/pixel-perfect" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Pixel-perfect</a>
+    <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Selectors" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Selectors</a>
+    <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Pseudo-classes" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Pseudo-classes</a>
+    <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Pseudo-elements" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Pseudo-elements</a>
+    <a href="https://developer.mozilla.org/ru/docs/Web/CSS/animation" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Animation</a>
+    <a href="https://developer.mozilla.org/ru/docs/Web/CSS/transition" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Transition</a>
     <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;HomeTask:</b>
+    <ul>
+        <li>
+            <i class="fa fa-check" aria-hidden="true"></i>&NonBreakingSpace;Добавить стилизацию как в макете. Отступы размеры шрифтов, сам шрифт, цвета:
+            <a href="https://www.figma.com/file/q0Npu2nrDInhVxVFWof6ro/Academy-HTML%2FCSS?node-id=0%3A1" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Figma</a>
+        </li>
+        <li><i class="fa fa-check" aria-hidden="true"></i>&NonBreakingSpace;Сверстать полностью страницу Article list(без адаптива)</li>
+        <li><i class="fa fa-check" aria-hidden="true"></i>&NonBreakingSpace;К ссылкам и кнопкам добавить эффект наведения. К инпутам элементов добавить Псевдокласс focus и дать другой цвет для border-а.</li>
+        <li><i class="fa fa-check" aria-hidden="true"></i>&NonBreakingSpace;Используя псевдоэлемент добавить логотип оникса и разместить его на картинке та что слева на странице login используя позиционирование.</li>
+    </ul>
     <b>Result:</b>
 </div>

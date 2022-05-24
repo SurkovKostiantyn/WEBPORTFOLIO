@@ -9,7 +9,7 @@ if(isset($_POST['timezone'])){
     $date = new DateTime();
     $date->setTimestamp($current_time_seconds);
     $date->setTimezone(new DateTimeZone(''.$_POST['timezone']));
-    echo "Current time: " . $date->format('Y-m-d H:i') . "\n";
+    echo "Current time: " . $date->format('Y-m-d H:i:s') . "\n";
     $date->modify('today midnight');
     $seconds_since_midnight = $current_time_seconds - $date->getTimestamp();
     echo "Seconds since midnight: ".$seconds_since_midnight;

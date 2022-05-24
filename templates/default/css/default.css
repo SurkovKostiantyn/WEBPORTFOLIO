@@ -387,7 +387,7 @@ form > button {
   border: none;
 }
 .content .article-tab thead tr td.table-checkbox, .content .article-tab tbody tr td.table-checkbox {
-  width: 20px;
+  width: 30px;
 }
 .content .article-tab thead tr td.table-image, .content .article-tab tbody tr td.table-image {
   width: 50px;
@@ -440,6 +440,10 @@ form > button {
 @media screen and (max-width: 680px) {
   .table-title, .table-status, .table-modified {
     display: none;
+  }
+
+  .content .article-elements {
+    display: block;
   }
 }
 table {

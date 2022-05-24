@@ -245,7 +245,7 @@ return match ($num) {
         let date = new Date();
 
         let h = date.getHours(), m = date.getMinutes(), s = date.getSeconds(), ms = date.getMilliseconds();
-        let pass = ms + (s * 1000) + (m * 60 + 1000) + (h * 60 * 60 * 1000);
+        let pass = ms + (s * 1000) + (m * 60 * 1000) + (h * 60 * 60 * 1000);
         task1.innerHTML = 'С полуночи прошло ' + pass + 'ms<br>' +
             '(' + h + 'h ' + m + 'm ' + s + 's ' + ms + 'ms)<br>' +
             h + 'h = ' + (h * (3600 * 1000)) + ' ms<br>' +

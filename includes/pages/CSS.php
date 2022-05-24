@@ -164,4 +164,15 @@ in css file:
         <li><i class="fa fa-check" aria-hidden="true"></i>&NonBreakingSpace;Используя псевдоэлемент добавить логотип оникса и разместить его на картинке та что слева на странице login используя позиционирование.</li>
     </ul>
     <b>Result:</b>
+    <b>Задание №1</b>
+    <a href="https://www.figma.com/file/eAKn9xmf2G5enhSfYuOlhA/lesson3" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Дизайн в Figma</a>
+    <a href="/lessons/lesson3/lesson3.html" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
+    <b>Задание №2</b>
+    <a href="/?page=main" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
+    <b>Задание №3</b>
+    <pre>Добавлен label, :focus, border</pre>
+    <a href="/?page=login" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
+    <b>Задание №4</b>
+    <pre>Логотип с позиционированием на главной странице</pre>
+    <a href="/?page=main" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
 </div>

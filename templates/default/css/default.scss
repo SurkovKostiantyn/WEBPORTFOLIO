@@ -365,7 +365,6 @@ form {
   }
   p {
     text-align: justify;
-    text-indent: 20px;
     line-height: 1.8;
   }
   p i, a i, li i, b i {
@@ -387,8 +386,7 @@ form {
     }
   }
   .article-elements{
-    width: calc(100% - 40px);
-    margin: 10px 20px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }

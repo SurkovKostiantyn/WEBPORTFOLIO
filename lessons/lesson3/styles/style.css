@@ -175,6 +175,10 @@ tbody tr td img{
     vertical-align: middle;
 }
 
+tbody tr td:nth-child(3){
+    font-weight: 500;
+}
+
 tbody tr td{
     font-family: 'Roboto', sans-serif;
     font-style: normal;

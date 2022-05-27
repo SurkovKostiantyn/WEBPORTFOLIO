@@ -205,6 +205,72 @@ return match ($num) {
     <h3>Lesson 3</h3>
     <b>Presentation:</b>
     <p>26.05.2022</p>
+
+    <b>Result:</b>
+    <p>1. Создаём класс User:
+<pre>
+class User{
+    public string $name;
+    private int $balance;
+
+    public function __construct(string $name = 'new_user', int $balance = 0){
+        $this->name = $name;
+        $this->balance = $balance;
+    }
+    public function printStatus():void{
+        echo $this->name.' has '.$this->balance." Shekels\n";
+    }
+    public function giveMoney (int $amount, User $receiver): bool{
+        if($amount > $this->getBalance()){
+            echo "Not enough Shekels ($this->balance)\n";
+            return false;
+        }else{
+            $this->balance -= $amount;
+            $receiver->balance += $amount;
+            echo $this->name.' send '.$amount.' Shekels to '.$receiver->name."\n";
+            return true;
+        }
+    }
+    public function getBalance(): int{
+        return $this->balance;
+    }
+}
+</pre>
+    <p>2. Подключаем класс:
+<pre>
+function load_other_classes($class_name):void{
+    $path_to_file = 'includes/classes/users/'.$class_name.'.php';
+    if (file_exists($path_to_file)) {
+        require_once $path_to_file;
+    }
+
+} spl_autoload_register('load_other_classes');
+</pre>
+    <p>3. Создаём объекты и т.д.:
+<pre>
+$Volandemort = new User('Volandemort', 100);
+$Harry = new User('Harry', 10);
+
+$Volandemort->printStatus();
+$Harry->printStatus();
+
+$Volandemort->giveMoney(50, $Harry);
+
+$Volandemort->printStatus();
+$Harry->printStatus();
+</pre>
+    <p>4. Получаем это:
+<pre>
+<?php
+$Volandemort = new User('Volandemort', 100);
+$Harry = new User('Harry', 10);
+$Volandemort->printStatus();
+$Harry->printStatus();
+$Volandemort->giveMoney(50, $Harry);
+$Volandemort->printStatus();
+$Harry->printStatus();
+?>
+</pre>
 </div>
 <script>
     window.onload = function(){update();btnUpdate2();};

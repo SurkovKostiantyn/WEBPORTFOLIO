@@ -2,12 +2,17 @@
 
 class Connect
 {
+    private const HOSTNAME = 'auris.cityhost.com.ua';
+    private const USERNAME = 'chf040afbb';
+    private const PASSWORD = '3e92f52678';
+    private const DATABASE = 'chf040afbb_maindb';
+
     public function getConnection():mysqli { //$link = $Connect->getConnection();
         return mysqli_connect(
-            'auris.cityhost.com.ua',
-            'chf040afbb',
-            '3e92f52678',
-            'chf040afbb_maindb'
+            self::HOSTNAME,
+            self::USERNAME,
+            self::PASSWORD,
+            self::DATABASE
         );
     }
 

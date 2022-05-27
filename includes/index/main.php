@@ -63,7 +63,7 @@
                     <input class="custom-checkbox" type="checkbox">
                 </td>
                 <td class="table-image">
-                    <img height="32" src="/files/bob.png">
+                    <img alt="alt" height="32" src="/files/bob.png">
                 </td>
                 <td class="table-title">
                     Lorem ipsum dolor sit amet

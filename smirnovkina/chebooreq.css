@@ -1,0 +1,62 @@
+body, html{
+    margin: 0;
+}
+
+a{
+    text-decoration: none !important;
+    color: #836847;
+    font:  400 18px/20px 'Roboto';
+}
+
+p{
+    font: 300 1.2em/1em 'Calibri';
+}
+
+header, nav, .content{
+    margin: 20px;
+}
+
+nav ul{
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.memes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.memes-box{
+    display: block;
+    margin: 20px 10px 0 10px;
+    width: 30%;
+    outline: #836847 solid 2px;
+    padding: 6px;
+}
+
+.memes-box .meme-img{
+    width: 100%;
+}
+
+.memes-box .meme-h{
+
+}
+.memes-box .meme-p{
+
+}
+
+@media screen and (max-width: 800px){
+    .content .memes{
+        display: block;
+    }
+    .content .memes .memes-box {
+        min-width: 400px;
+    }
+}

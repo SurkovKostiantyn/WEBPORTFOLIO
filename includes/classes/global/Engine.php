@@ -2,27 +2,26 @@
 class Engine{
     private string $_page_file;
     private string $title = "WP ";
-    private string $pagesDir = 'includes/pages';
+    private const PAGES_MENU = 'includes/pages/';
+    private const PAGES_INDEX = 'includes/index/';
     private $_error = null;
-    private string $nav = '';
 
     public function __construct() {
         if (isset($_GET["page"])) {
             $searchArr = array(".","/","");
             $pageName = str_replace($searchArr, null, $_GET["page"]); // получаем, например, CSS HTML PHP
 
-            if (file_exists("includes/pages/$pageName.php")) {  // сначала с папки includes/pages
-                $this->_page_file = "includes/pages/$pageName.php";
+            if (file_exists(self::PAGES_MENU.$pageName.".php")) {  // сначала с папки includes/pages
+                $this->_page_file = self::PAGES_MENU.$pageName.".php";
                 $this->title .= strtoupper($pageName);
             }
-            else if(file_exists("includes/index/$pageName.php")){ // потом другие странички с папки includes/index
-                $this->_page_file = "includes/index/$pageName.php";
+            else if(file_exists(self::PAGES_INDEX.$pageName.".php")){ // потом другие странички с папки includes/index
+                $this->_page_file = self::PAGES_INDEX.$pageName.".php";
                 $this->title .= strtoupper($pageName);
             }
             else{//если такой странички не существует, то
                 $this->_setError(); //Ошибку на экран
-                $this->_page_file = "includes/index/404.php"; //Открываем 404
-                $this->title .= "404";
+                $this->title .= "ERROR";
             }
         }
         //Если в GET запросе нет переменной page, то открываем главную
@@ -46,7 +45,7 @@ class Engine{
     }
 
     public function getMenuList(): string  {
-        $files = scandir($this->pagesDir, 0);
+        $files = scandir(self::PAGES_MENU);
 
         for($i = 0; $i < sizeof($files); $i++) {
             if (str_contains($files[$i], '.php')) {
@@ -56,9 +55,9 @@ class Engine{
                 if(str_contains($url, $name)){
                     $class .= ' active';
                 }
-                $this->nav .= '<a ' . $class . '" href="/?page=' . $name . '">' . strtoupper($name) . '</a>';
+                $nav .= '<a ' . $class . '" href="/?page=' . $name . '">' . strtoupper($name) . '</a>';
             }
         }
-        return $this->nav;
+        return $nav;
     }
 }

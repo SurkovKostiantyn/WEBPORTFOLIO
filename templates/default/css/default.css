@@ -11,7 +11,7 @@ pre ::-webkit-scrollbar-track, li pre ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px #0d1a13;
 }
 pre ::-webkit-scrollbar-thumb, li pre ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, #00c853, #d359ff);
+  background: linear-gradient(to right, #00C853, #d359ff);
 }
 
 pre {
@@ -99,7 +99,7 @@ html ::-webkit-scrollbar-track, body ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px #0d1a13;
 }
 html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to left bottom, #00c853, #d359ff);
+  background: linear-gradient(to left bottom, #00C853, #d359ff);
 }
 
 header .site-header {
@@ -114,7 +114,7 @@ header .site-header:before {
 }
 header .site-header:after {
   content: "/>";
-  color: #00c853;
+  color: #00C853;
   font-size: min(70px, max(30px, 6vw));
 }
 
@@ -151,7 +151,7 @@ nav .responsive a:nth-last-of-type(-n+4) {
 }
 
 .sticky {
-  background: linear-gradient(to right, #00c853, #d359ff);
+  background: linear-gradient(to right, #00C853, #d359ff);
   position: sticky;
   z-index: 10;
   top: 0;
@@ -245,7 +245,7 @@ form > input {
 }
 form > input:focus, form > input :active {
   border: none;
-  outline: solid 2px #00c853;
+  outline: solid 2px #00C853;
 }
 form > button {
   width: 212px;
@@ -299,7 +299,7 @@ form > button {
   color: #0d1a13;
 }
 .button-css > option > :hover {
-  background-color: #00c853;
+  background-color: #00C853;
   color: #f2e5ec;
 }
 
@@ -337,7 +337,7 @@ form > button {
   line-height: 1.8;
 }
 .content p i, .content a i, .content li i, .content b i {
-  color: #00c853;
+  color: #00C853;
 }
 .content .button-css {
   margin: 10px 20px;
@@ -454,7 +454,7 @@ table td, table th {
   padding: 8px;
 }
 table th {
-  color: #00c853;
+  color: #00C853;
 }
 table td {
   color: #f2e5ec;

@@ -45,7 +45,7 @@
     <a href="https://developer.mozilla.org/ru/docs/Learn/Forms/Your_first_form" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Mozilla</a>
     <a href="http://htmlbook.ru/html/" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Htmlbook</a>
     <a href="https://developer.mozilla.org/ru/docs/Learn/Forms/Form_validation" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Mozilla (validation)</a>
-    <a href="https://habr.com/ru/post/332804/" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;habr.com</a>
+    <a href="https://habr.com/ru/post/332804/" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Habr.com</a>
 
     <b> <i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Hometask:</b>
     <ul>
@@ -95,6 +95,7 @@
 in css file:
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');</pre>
+
     <p>
         3. Добавить таблицу, которая будет нести в себе thead, tbody, tfoot и попробовать объединить колонки друг с другом:
     <table>
@@ -129,7 +130,7 @@ in css file:
         </tr>
         </tfoot>
     </table>
-    </p>
+
     <p>
         4. Cверстать 2 страницы с формами:<br>
         <a href="https://webportfolio.com.ua/?page=login" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;This page</a>
@@ -166,7 +167,7 @@ in css file:
     <b>Result:</b>
     <b>Задание №1</b>
     <a href="https://www.figma.com/file/eAKn9xmf2G5enhSfYuOlhA/lesson3" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Дизайн в Figma</a>
-    <a href="/lessons/lesson3/lesson3.html" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
+    <a href="/lessons/lesson3/articles.html" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
     <b>Задание №2</b>
     <a href="/?page=main" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
     <b>Задание №3</b>
@@ -174,5 +175,5 @@ in css file:
     <a href="/?page=login" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
     <b>Задание №4</b>
     <pre>Логотип с позиционированием</pre>
-    <a href="/lessons/lesson3/logout.html" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
+    <a href="/lessons/lesson3/login.html" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Страничка</a>
 </div>

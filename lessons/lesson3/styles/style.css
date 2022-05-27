@@ -65,11 +65,13 @@ a.table-link:hover{
 }
 header{
     padding: 20px 40px;
-    border-bottom: 2px solid rgba(114, 114, 114, 0.76);
+    border-top: 2px solid rgba(114, 114, 114, 0.2);
+    border-bottom: 2px solid rgba(114, 114, 114, 0.2);
 }
 a.logo{
-    font-family: "Roboto Light", sans-serif;
-    font-size: 40px;
+    font-family: 'Spartan', sans-serif;
+    font-style: normal;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -101,10 +103,11 @@ h4{
     font-family: "Roboto Light", sans-serif;
     font-size: 14px;
     line-height: 16px;
+    font-weight: 400;
     color: #D4A373;
 }
 h1{
-    font-family: "Roboto Light", serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
@@ -120,7 +123,9 @@ h1.h-logout{
     margin: 0 0 10px 0;
 }
 .search{
-    border: 1px solid rgba(114, 114, 114, 0.76);
+    border: 1px solid rgba(114, 114, 114, 0.2);
+    padding: 10px;
+    min-width: 300px;
 }
 .add{
     border: 2px solid #D4A373;
@@ -150,31 +155,43 @@ table{
     border-collapse: collapse;
 }
 table thead tr, table tbody tr{
-    border-bottom: 1px solid rgba(114, 114, 114, 0.76);
+    border-bottom: 1px solid rgba(114, 114, 114, 0.2);
 }
+thead{
+    color: #6C757D;
+}
+tbody{
+    color: #495057;
+}
+
 thead tr, tbody tr{
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 20px;
 }
 tbody tr td{
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
 }
+
+td i{
+    color: #000000;
+    font-weight: 100;
+}
+
 td{
-    padding: 6px 8px;
+    margin: 6px 0;
+    padding: 8px 8px;
     border: none;
     text-align: left;
 }
 
 label{
     margin-bottom: 6px;
-    font-family: 'Lora';
+    font-family: 'Lora', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

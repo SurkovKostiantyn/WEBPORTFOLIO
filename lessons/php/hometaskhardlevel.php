@@ -56,22 +56,16 @@ class Client{
         $this->fuelMax = $fuelMax;
     }
 
-    public function getId(): int
-    {
+    public function getId(): int    {
         return $this->id;
     }
-
-    public function getFuelType(): int
-    {
+    public function getFuelType(): int    {
         return $this->fuelType;
     }
-
-    public function getBalance(): int
-    {
+    public function getBalance(): int    {
         return $this->balance;
     }
-    public function setBalance($cost): void
-    {
+    public function setBalance($cost): void    {
         $this->balance -= $cost;
     }
     public function getRemaining():int{
@@ -90,7 +84,7 @@ $ANP = new Zapravka(); // создали заправку, теперь надо
 
 // у нас 3 колонки
 
-for($type = 0;$type < 3; $type++) {// заливаем бенз dp gaz
+for($type = 0;$type < 3; $type++) {// заливаем бенз dp gaz  в хранилища
     $volumeNeeded = $ANP->getBunkerTypeMax($type); // how much
     $ANP->getFuel($volumeNeeded, $type);
 }
@@ -106,12 +100,14 @@ for($i = 1; $i < 100; $i++){
 // заправляем полный бак $Client1
 $howMuchFuelNeed = $Client1->getFuelMax() - $Client1->getRemaining();
 $ClientFuelType = $Client1->getFuelType();
-$money = $Client1->getBalance();
+$ClientBalance = $Client1->getBalance();
 $cost = $howMuchFuelNeed * 40.0; // допустим всё по 40
 
-if($cost > $money){
+if($cost <= $ClientBalance){
     if($Zapravka->takeFuel($howMuchFuelNeed, $ClientFuelType)){
         $Client1->setRemaining($howMuchFuelNeed);
-        $Client1->setBalance($cost);
-    }
-}
+        $Client1->setBalance($cost); // отнимаем у клиента баланс
+    }else echo 'нет топлива';
+}else echo 'не хватает денег';
+
+

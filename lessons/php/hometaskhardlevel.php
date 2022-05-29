@@ -20,8 +20,8 @@ class Zapravka{ // $ANP = new Zapravka() - создать заправку.
         new Kolonka(ai);
         new Kolonka(dp);
         new Kolonka(gaz);
-        new Personal('Galya', 'kassir');
-        new Personal('Vasya', 'operator');
+        new Personal('Galya');
+        new Personal('Vasya');
     }
 
     public function getFuel(int $volume, int $type): bool{ // залить топливо в бункер
@@ -63,11 +63,24 @@ class Kolonka{ // создаётся колонка с типом топлива
 
 class Personal{
     public string $name;
-    public string $posada; // оператор / кассир
+
+}
+
+class Operator extends Personal{
+
+}
+
+class GalyaNaKasse extends Personal{
+
 }
 
 class Client{
-    public string $name;
+    public int $id;
     public int $fuelType;
+    private int $balance;
 
+    public function __construct($id, $fuelType){
+        $this->id = $id;
+        $this->fuelType = $fuelType;
+    }
 }

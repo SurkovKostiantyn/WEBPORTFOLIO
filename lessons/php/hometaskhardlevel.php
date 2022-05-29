@@ -16,28 +16,15 @@ class Zapravka{ // $ANP = new Zapravka() - создать заправку.
         gaz => 0
     );
 
-    public function __construct(){ //
-        new Kolonka(ai);
-        new Kolonka(dp);
-        new Kolonka(gaz);
-        new Personal('Galya');
-        new Personal('Vasya');
+    public function getFuel(int $volume, int $type): void{ // залить топливо в бункер
+        $this->bunkersAmount[$type] += $volume;
     }
 
-    public function getFuel(int $volume, int $type): bool{ // залить топливо в бункер
-        if($volume + $this->bunkersAmount[$type] > $this->bunkersMax[$type]){
-            return false;
-        } else{
-            $this->bunkersAmount[$type] += $volume;
-            return true;
-        }
-    }
-
-    public function takeFuel(int $volume, int $type): float{  // отнять топливо залитое в машину и вернуть стоимость топлива.
+    public function takeFuel(int $volume, int $type): float{  // отнять топливо залитое в машину
         if($this->bunkersAmount[$type] > $volume) {
             $this->bunkersAmount[$type] -= $volume;
-            return $volume * cost;
-        }else return 0.0;
+            return true;
+        }else return false;
     }
 
     public function getBunkerMax():int{ // какой объём бункера общий
@@ -47,30 +34,10 @@ class Zapravka{ // $ANP = new Zapravka() - создать заправку.
     public function getBunkerTypeMax(int $type): int { // какой объём бункера по типу топлива
         return $this->bunkersMax[$type];
     }
-}
 
-class Kolonka{ // создаётся колонка с типом топлива.
-    public int $type;
-
-    public function __construct($type){
-        $this->type = $type;
+    public function getAmount(int $type):int{
+        return $this->bunkersAmount[$type];
     }
-
-    public function getKolonkaType():int{
-        return $this->type;
-    }
-}
-
-class Personal{
-    public string $name;
-
-}
-
-class Operator extends Personal{
-
-}
-
-class GalyaNaKasse extends Personal{
 
 }
 
@@ -78,9 +45,73 @@ class Client{
     public int $id;
     public int $fuelType;
     private int $balance;
+    public int $remaining;  //остаток топлива
+    public int $fuelMax;    //размер бака
 
-    public function __construct($id, $fuelType){
+    public function __construct($id, $fuelType, $balance, $remaining, $fuelMax){
         $this->id = $id;
         $this->fuelType = $fuelType;
+        $this->balance = $balance;
+        $this->remaining = $remaining;
+        $this->fuelMax = $fuelMax;
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function getFuelType(): int
+    {
+        return $this->fuelType;
+    }
+
+    public function getBalance(): int
+    {
+        return $this->balance;
+    }
+    public function setBalance($cost): void
+    {
+        $this->balance -= $cost;
+    }
+    public function getRemaining():int{
+        return $this->remaining;
+    }
+    public function setRemaining($volume):void{
+        $this->remaining += $volume;
+    }
+    public function getFuelMax():int{
+        return $this->fuelMax;
+    }
+}
+
+// чё то такое:
+$ANP = new Zapravka(); // создали заправку, теперь надо залить топливо в хранилища:
+
+// у нас 3 колонки
+
+for($type = 0;$type < 3; $type++) {// заливаем бенз dp gaz
+    $volumeNeeded = $ANP->getBunkerTypeMax($type); // how much
+    $ANP->getFuel($volumeNeeded, $type);
+}
+
+// теперь у нас заправка с полными хранилищами.
+
+// создали 100 клиентов с различным видом топлива и балансом.
+for($i = 1; $i < 100; $i++){
+    $id = 'client'.$id;
+    ${$id} = new Client($i, rand(0,2), rand(100,10000), rand(2, 20), rand(30, 300));
+}
+
+// заправляем полный бак $Client1
+$howMuchFuelNeed = $Client1->getFuelMax() - $Client1->getRemaining();
+$ClientFuelType = $Client1->getFuelType();
+$money = $Client1->getBalance();
+$cost = $howMuchFuelNeed * 40.0; // допустим всё по 40
+
+if($cost > $money){
+    if($Zapravka->takeFuel($howMuchFuelNeed, $ClientFuelType)){
+        $Client1->setRemaining($howMuchFuelNeed);
+        $Client1->setBalance($cost);
     }
 }

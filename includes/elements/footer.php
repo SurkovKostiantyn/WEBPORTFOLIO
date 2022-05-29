@@ -15,7 +15,7 @@
         <a class="media" href="https://telegram.me/iplague" target="_blank">
             <i class="fa fa-telegram" aria-hidden="true"></i>
         </a>
-        <p>Helpful links</p>
+        <p>Helpful links:</p>
         <div class="helpful">
             <a href="https://w3schools.org" target="_blank">W3schools</a>
             <a href="https://developer.mozilla.org" target="_blank">Dev Mozilla.org</a>
@@ -25,8 +25,8 @@
             <a href="https://fontawesome.com" target="_blank">Fontawesome</a>
             <a href="https://onix.academy" target="_blank">Onix Academy</a>
             <a href="https://htmlbook.ru/html" target="_blank">Htmlbook</a>
-            <a href="https://www.jetbrains.com/phpstorm/promo/" target="_blank">РНР Storm</a>
-            <a href="https://www.php.net/manual/ru/index.php" target="_blank">РНР docs</a>
+            <a href="https://www.jetbrains.com/phpstorm/promo/" target="_blank">PHP Storm</a>
+            <a href="https://www.php.net/manual/ru/index.php" target="_blank">PHP docs</a>
             <a href="https://css-tricks.com" target="_blank">CSS tricks</a>
             <a href="https://stackoverflow.com" target="_blank">Stackoverflow</a>
             <a href="https://www.freecodecamp.org" target="_blank">Freecodecamp</a>

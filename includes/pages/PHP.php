@@ -1,15 +1,23 @@
 <div class="content">
-    <h3>Lesson 1</h3>
+    <h3>List:</h3>
+    <ul>
+        <li><a href="#lesson1"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 1</a></li>
+        <li><a href="#lesson2"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 2</a></li>
+        <li><a href="#lesson3"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 3</a></li>
+        <li><a href="#lesson4"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 4</a></li>
+    </ul>
+    <hr>
+    <h3 id="lesson1">Lesson 1</h3>
     <b>Presentation:</b>
-    <a href="https://docs.google.com/presentation/d/1vStwVV_O-Ydzg9oo4fAwOq3tqDCdNf3ucCLevCqEsJQ/edit?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Google Disk</a>
-    <b>Материал урока:</b>
-    <a href="https://github.com/nesh-ua/onix-academy-php/tree/master/lessons/lesson-01" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Github</a>
-    <b>Рекомендуемые ссылки:</b>
+    <a href="https://docs.google.com/presentation/d/1vStwVV_O-Ydzg9oo4fAwOq3tqDCdNf3ucCLevCqEsJQ/edit?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Google Disk</a>
+    <b>Theory:</b>
+    <a href="https://github.com/nesh-ua/onix-academy-php/tree/master/lessons/lesson-01" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Github</a>
+    <b>Recommended links:</b>
     <a href="https://www.jetbrains.com/phpstorm/promo/" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Редактор кода для РНР</a>
     <a href="https://www.php.net/manual/ru/index.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Документация по РНР</a>
     <a href="https://www.php.net/manual/ru/ini.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Описание директив php.ini</a>
     <a href="https://www.php.net/manual/ru/extensions.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Список/классификация модулей PHP</a>
-    <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Задание:</b>
+    <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Home task:</b>
     <ul>
         <li>
             <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Установить php
@@ -38,31 +46,31 @@
     </select>
 <pre id="date"></pre>
     <hr>
-    <h3>Lesson 2</h3>
+    <h3 id="lesson2">Lesson 2</h3>
     <b>Presentation:</b>
-    <a href="https://drive.google.com/file/d/17JDIiRgV1_MHxcnPam8InS4akKl97f9J/view?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Google Disk</a>
-    <b>Материал урока:</b>
-    <a href="https://github.com/nesh-ua/onix-academy-php/blob/master/lessons/lesson-02/" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Перейти на Github</a>
-    <b>Рекомендуемые ссылки:</b>
+    <a href="https://drive.google.com/file/d/17JDIiRgV1_MHxcnPam8InS4akKl97f9J/view?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Google Disk</a>
+    <b>Theory:</b>
+    <a href="https://github.com/nesh-ua/onix-academy-php/blob/master/lessons/lesson-02/" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Github</a>
+    <b>Recommended links:</b>
     <a href="https://www.php.net/manual/ru/language.types.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;www.php.net</a>
-    <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Задание:</b>
+    <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Home task:</b>
     <ul>
         <li>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;<strong>Задание №1 - Clock</strong><br>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;<strong>Task №1 - Clock</strong><br>
             Часы показывают h часов, m минут и s секунд после полуночи. Ваша задача — написать функцию, которая возвращает время с полуночи в миллисекундах.
         </li>
         <li>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;<strong>Задание №2 - Counting Duplicates</strong><br>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;<strong>Task №2 - Counting Duplicates</strong><br>
             Напишите функцию, которая будет возвращать количество различных буквенных символов и цифр, не зависящих от регистра, встречающихся во входной строке более одного раза. Можно предположить, что входная строка содержит только буквы (как прописные, так и строчные) и числовые цифры.
         </li>
         <li>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;<strong>Задание №3 - Create Phone Number</strong><br>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;<strong>Task №3 - Create Phone Number</strong><br>
             Напишите функцию, которая принимает массив из 10 целых чисел (от 0 до 9) и возвращает строку этих чисел в виде номера телефона.
             createPhoneNumber([1,2,3,4,5,6,7,8,9,0]); // => returns "(123) 456-7890"
             Возвращаемый формат должен быть правильным, чтобы выполнить эту задачу. Не забудьте пробел после закрывающей скобки!
         </li>
         <li>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Задание №4 - Count of languages</strong><br>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Task №4 - Count of languages</strong><br>
             Вам будет предоставлен ассоциативный массив, представляющий данные о разработчиках, которые подписались на участие в следующей встрече программистов, где вы организатор. Ваша задача — вернуть массив, который включает количество языков программирования, представленных на встрече.
             Дано:<br>
 <pre>
@@ -111,7 +119,7 @@ $list1 = [
 </pre>
         </li>
         <li>
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;<strong>Задание №5 - Who likes it?</strong><br>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;<strong>Task №5 - Who likes it?</strong><br>
             Вы, наверное, знаете систему «лайков» из Facebook и других страниц. Люди могут «лайкать» сообщения в блогах, изображения или другие элементы. Мы хотим создать текст, который должен отображаться рядом с таким элементом.
             Реализуйте функцию принимающую массив с именами людей, которым понравился элемент. Он должен возвращать отображаемый текст, как показано в примерах:
 <pre>
@@ -126,7 +134,7 @@ $list1 = [
     <b>Result:</b>
     <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/PHP.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check Github</a>
 
-    <p>Задание №1.</p>
+    <p>Task №1.</p>
     <b>Method #1 (JS)</b>
 <pre>
 Для справки: в 1 с - 1000 мс.
@@ -163,15 +171,15 @@ $list1 = [
         <option value="Pacific/Tongatapu">(UTC+13:00) Samoa</option>
     </select>
 <pre id="task1a"></pre>
-    <p>Задание №2.</p>
+    <p>Task №2.</p>
     <textarea class="button-css" placeholder="Type some words there" id="task2input" type="text"></textarea>
     <button class="button-css" type="button" onclick="CountingDuplicates();">PRESS ME</button>
     <pre id="task2" class="result">Answer will appear this row</pre>
-    <p>Задание №3.</p>
+    <p>Task №3.</p>
     <input class="button-css" maxlength="10" id="input3" title="Only digits like 0661259997" placeholder="Enter phone number" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
     <button class="button-css" type="button" onclick="showNumber();">PRESS ME</button>
     <pre id="task3">Answer will appear this row</pre>
-    <p>Задание №4.</p>
+    <p>Task №4.</p>
 <pre>
 <?php $Lessons->lesson1task4(); ?>
 </pre>
@@ -182,7 +190,7 @@ $counts = array_count_values(
 );
 print_r($counts);
 </pre>
-    <p>Задание №5.</p>
+    <p>Task №5.</p>
 <pre>
 <?= $Lessons->getLikes(0); ?>
 <?= $Lessons->getLikes(1); ?>
@@ -202,10 +210,55 @@ return match ($num) {
 };
 </pre>
     <hr>
-    <h3>Lesson 3</h3>
-    <b>Presentation:</b>
-    <p>26.05.2022</p>
-
+    <h3 id="lesson3">Lesson 3</h3>
+    <b>Video:</b>
+    <a href="https://drive.google.com/file/d/1I-EyWy_ymkCw7c-rDWxMvtI6Ucqt0Ijs/view" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Google Disk</a>
+    <b>Theory:</b>
+    <a href="https://github.com/nesh-ua/onix-academy-php/blob/master/lessons/lesson-03/theory.md" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Github</a>
+    <b>Recommended links:</b>
+    <a href="https://www.php.net/manual/ru/oop5.intro.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Введение</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.basic.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Основы</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.properties.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Свойства</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.constants.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Константы классов</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.decon.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Конструкторы и деструкторы</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.visibility.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Область видимости</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.inheritance.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Наследование</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.paamayim-nekudotayim.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Оператор разрешения области видимости (::)</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.static.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Ключевое слово static</a>
+    <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Home task:</b>
+    <ul>
+        <li>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Реализовать класс User у которого есть приватные свойства name и balance (сумма денег на счету)
+        </li>
+        <li>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Реализовать публичный метод printStatus который выводит сообщение следующего формата &quot;У пользователя &lt;name&gt; сейчас на счету $&lt;balance&gt;&quot;
+        </li>
+        <li>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Реализовать публичный метод giveMoney который передает деньги от одного пользователя к другому (нельзя передать больше денег чем есть на балансе).
+        </li>
+        <li>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Во время передачи денег выводится сообщение &quot;Пользователь &lt;name&gt; перечислил $&lt;amount&gt; пользователю &lt;name&gt;&quot;
+        </li>
+        <li>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Пользователю нельзя изменить баланс любым другим способом кроме giveMoney
+        </li>
+        <li>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Создать 2 экземпляра класса User с разными балансами, вывести состояние счета каждого из них, совершить передачу денег от одного к другому, снова вывести состояние счета каждого из них.
+        </li>
+        <li>
+            <i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Все обращения к полям должны быть через методы
+        </li>
+    </ul>
+    <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Home task<sup>*</sup>:</b>
+    <ul>
+        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Реализовать объектно ориентированную модель заправочной станции (клиент, колонка (3 колонки, одна дизельная, одна газовая, одна бензиновая), кассир, касса с деньгами, заказ)</li>
+        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Реализовать процесс продажи топлива</li>
+        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Реализовать процесс создания нового клиента кассиром</li>
+        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Учесть что в автомобиле может быть разный тип топлива</li>
+        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Учесть цены на разное топливо</li>
+        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;После получения денег от клиента подать топливо нужно на правильную колонку</li>
+        <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Учесть запасы топлива на колонке и момент когда топлива может быть недостаточно чтобы удовлетворить заказ клиента, в таком случае заправляем все что есть а сдачу отдаем</li>
+    </ul>
     <b>Result:</b>
     <p>1. Создаём класс User:
 <pre>
@@ -271,6 +324,8 @@ $Volandemort->printStatus();
 $Harry->printStatus();
 ?>
 </pre>
+    <b>Result for Home task<sup>*</sup>:</b>
+    <pre>in progress..</pre>
 </div>
 <script>
     window.onload = function(){update();btnUpdate2();};

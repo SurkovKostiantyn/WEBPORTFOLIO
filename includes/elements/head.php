@@ -22,12 +22,17 @@
 
     <?= $Engine->getTitle() ?>
 
-    <?php
+<?php
     $version = date('his');
     $theme = $Connect->getThemeName();
     echo '<link rel="stylesheet" href="/templates/'.$theme.'/css/default.css?ver=' . $version . '">';
     echo '<link rel="stylesheet" href="/templates/'.$theme.'/css/firefly.css?ver=' . $version . '">';
-    ?>
+?>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/a7c1eeb7ad.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>

@@ -87,9 +87,8 @@ html, body {
   background-size: cover;
   margin: 0 auto;
   padding: 0;
-  font-family: "Quicksand", sans-serif;
+  font: 400 1em/1em "Roboto", sans-serif;
   line-height: 20px;
-  font-size: 1em;
   color: #f2e5ec;
 }
 html ::-webkit-scrollbar, body ::-webkit-scrollbar {
@@ -105,6 +104,7 @@ html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
 header .site-header {
   padding: 40px;
   font-size: min(70px, max(30px, 6vw));
+  font-weight: 900;
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 200, 83, 0.5), rgba(211, 89, 255, 0.5), rgba(0, 0, 0, 0));
 }
 header .site-header:before {
@@ -253,7 +253,7 @@ form > button {
   padding: 4px 6px;
   color: #0d1a13;
   text-align: center;
-  font-family: Arial, FontAwesome, serif;
+  font-family: Roboto, FontAwesome, sans-serif;
   border: none;
   background: #f2e5ec;
 }
@@ -262,7 +262,7 @@ form > button {
   text-align: center;
   display: block;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 300;
   color: #f2e5ec;
   line-height: 1.3;
   padding: 0.5em 1.5em;
@@ -295,7 +295,7 @@ form > button {
 }
 .button-css > option {
   text-align: left;
-  font-weight: 500;
+  font-weight: 300;
   color: #0d1a13;
 }
 .button-css > option > :hover {
@@ -327,6 +327,7 @@ form > button {
 }
 .content > a, .content ul {
   margin: 0 20px;
+  text-align: left;
 }
 .content > h3 {
   width: 100%;
@@ -365,7 +366,6 @@ form > button {
   overflow-wrap: break-word;
   margin: 10px 20px;
   font-size: 0.7em;
-  font-weight: 100;
   border: none;
 }
 .content .article-tab thead {
@@ -534,7 +534,7 @@ footer p.copyright {
 }
 
 input, .button-css {
-  font-family: Arial, FontAwesome, serif;
+  font-family: Roboto, FontAwesome, serif;
 }
 
 /*# sourceMappingURL=default.css.map */

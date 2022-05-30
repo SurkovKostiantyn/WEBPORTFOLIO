@@ -25,7 +25,7 @@ if (isset($_REQUEST['username-reg'])) {
     if($password === $password_r){
         $create_datetime = date("Y-m-d H:i:s");
 
-        $query    = "INSERT into `users` (username, password, email, create_datetime)
+        $query    = "INSERT into `user` (username, password, email, create_datetime)
                          VALUES ('$username', '" . md5($password) . "', '$email', '$create_datetime')";
         $result   = mysqli_query($con, $query);
         if ($result) {
@@ -43,7 +43,7 @@ if (isset($_POST['username'])) {
     $password = stripslashes($_POST['password']);
     $password = mysqli_real_escape_string($con, $password);
     // Check user is exist in the database
-    $query    = "SELECT `id` FROM `users` WHERE username='$username'
+    $query    = "SELECT `id` FROM `user` WHERE username='$username'
                          AND password='" . md5($password) . "'";
     $result = mysqli_query($con, $query) or die(mysqli_error());
     $rows = mysqli_num_rows($result);

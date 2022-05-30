@@ -1,20 +1,24 @@
 <?php
-if (isset($_POST['fuelType']) && isset($_POST['fuelVolume']) && isset($_POST['clientName'])){
-    $fuelType = stripslashes($_POST['fuelType']);
-    $fuelVolume = stripslashes($_POST['fuelVolume']);
-    $clientName = stripslashes($_POST['clientName']);
 
-    //var_dump($fuelType);
-    //var_dump($fuelVolume);
-    //var_dump($clientName);
+$ANP->loadData();
+//$Clients->loadClients();
 
-    $x = $ANP->takeFuel($fuelVolume, $fuelType);
+if(isset($_POST['checked'])){
+    if (isset($_POST['fuelType']) && isset($_POST['fuelVolume'])){
+        $fuelType = stripslashes($_POST['fuelType']);
+        $fuelVolume = stripslashes($_POST['fuelVolume']);
 
-    var_dump($x);
-
-    unset($_POST['fuelType']);
-    unset($_POST['fuelVolume']);
-    unset($_POST['clientName']);
+        if(isset($_POST['clientName'])){
+            $clientName = stripslashes($_POST['clientName']);
+            $ANP->takeFuel($fuelVolume, $fuelType, $clientName);
+        }else{
+            $ANP->takeFuel($fuelVolume, $fuelType);
+        }
+        unset($_POST['fuelType']);
+        unset($_POST['fuelVolume']);
+        unset($_POST['clientName']);
+    }
+    unset($_POST['checked']);
 }
 ?>
 <div class="content">
@@ -199,7 +203,7 @@ $list1 = [
     <button class="button-css" type="button" onclick="CountingDuplicates();">PRESS ME</button>
     <pre id="task2" class="result">Answer will appear this row</pre>
     <p>Task №3.</p>
-    <input class="button-css" maxlength="10" id="input3" title="Only digits like 0661259997" placeholder="Enter phone number" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
+    <input class="button-css" maxlength="10" id="input3" title="Only digits like 0661259997" placeholder="Enter phone number" oninput="this.value = this.value.replace(/\D/g, '').replace(/(\..*?)\..*/g, '$1');">
     <button class="button-css" type="button" onclick="showNumber();">PRESS ME</button>
     <pre id="task3">Answer will appear this row</pre>
     <p>Task №4.</p>
@@ -400,6 +404,8 @@ Today sold [total cars <?=$ANP->getCarsNum();?>]:
 
     <b>Check information below:</b>
     <pre id="task33b"></pre>
+    <label for="checked">If норм press checkbox</label>
+    <input type="checkbox" name="checked" id="checked">
     <b>Ok, now operator's task:</b>
 <pre>
 If Client want to be a new Client

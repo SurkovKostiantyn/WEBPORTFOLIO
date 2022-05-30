@@ -12,7 +12,7 @@ foreach (glob("includes/classes/global/*.php") as $filename) {
 }
 
 function load_other_classes($class_name):void{
-    $path_to_file = 'includes/classes/users/'.$class_name.'.php';
+    $path_to_file = 'includes/classes/user/'.$class_name.'.php';
     if (file_exists($path_to_file)) {
         require_once $path_to_file;
     }

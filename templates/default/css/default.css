@@ -280,6 +280,12 @@ form > button {
 .button-css::-ms-expand {
   display: none;
 }
+.button-css:disabled {
+  color: #414141;
+}
+.button-css:disabled:hover {
+  background: none;
+}
 .button-css:hover {
   border: 2px solid;
   border-image-slice: 1;
@@ -321,6 +327,9 @@ form > button {
 }
 .content:last-child {
   margin-bottom: 10px;
+}
+.content label {
+  margin: 0 20px;
 }
 .content > p, .content b {
   margin: 10px 20px;

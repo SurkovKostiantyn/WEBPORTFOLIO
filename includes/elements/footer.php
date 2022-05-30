@@ -34,23 +34,4 @@
         </div>
         <p class="copyright">Copyright © 2022 Surkov Kostiantyn for Onix Academy</p>
     </footer>
-    <p id="demo"></p>
     <script src="/includes/js/nav.js"></script>
-
-    <script>
-        document.getElementById("myBody").addEventListener("mousemove", function(event) {
-            myFunction(event);
-        });
-
-        function myFunction(e) {
-            let x = e.clientX;
-            let y = e.clientY;
-
-            //console.log(x + " " + window.innerWidth + "\n" + y + " " +  window.innerHeight);
-
-            let outputX = ( window.innerWidth / 2 ) > x ? 0 : 1;
-            let outputY = ( window.innerHeight / 2 ) > y ? 0 : 1;
-
-            console.log(outputX + "  " + outputY);
-        }
-    </script>

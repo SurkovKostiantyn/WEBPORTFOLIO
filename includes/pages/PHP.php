@@ -1,10 +1,33 @@
+<?php
+if (isset($_POST['fuelType']) && isset($_POST['fuelVolume']) && isset($_POST['clientName'])){
+    $fuelType = stripslashes($_POST['fuelType']);
+    $fuelVolume = stripslashes($_POST['fuelVolume']);
+    $clientName = stripslashes($_POST['clientName']);
+
+    //var_dump($fuelType);
+    //var_dump($fuelVolume);
+    //var_dump($clientName);
+
+    $x = $ANP->takeFuel($fuelVolume, $fuelType);
+
+    var_dump($x);
+
+    unset($_POST['fuelType']);
+    unset($_POST['fuelVolume']);
+    unset($_POST['clientName']);
+}
+?>
 <div class="content">
     <h3>List:</h3>
     <ul>
         <li><a href="#lesson1"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 1</a></li>
         <li><a href="#lesson2"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 2</a></li>
-        <li><a href="#lesson3"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 3</a></li>
-        <li><a href="#lesson4"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 4</a></li>
+        <li>
+            <a href="#lesson3"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 3</a>
+            <a href="#lesson3task1"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Home task 1</a>
+            <a href="#lesson3task2"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Home task 2</a>
+        </li>
+        <li><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 4</a></li>
     </ul>
     <hr>
     <h3 id="lesson1">Lesson 1</h3>
@@ -35,8 +58,8 @@
     <b>Result:</b>
     <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/PHP.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check Github</a>
 
-    <select class="button-css" name="formats" size="1" id="lesson1" onChange="update();">
-        <option value="Y - m - d" selected  >2022 - 01 - 01</option>
+    <select class="button-css" name="formats" size="1" id="lesson1task1" onChange="update();">
+        <option selected value="Y - m - d"  >2022 - 01 - 01</option>
         <option value="Y / m / d"           >2022 / 01 / 01</option>
         <option value="d.m.Y"               >01.01.2022</option>
         <option value="d.m.y"               >01.01.22</option>
@@ -172,7 +195,7 @@ $list1 = [
     </select>
 <pre id="task1a"></pre>
     <p>Task №2.</p>
-    <textarea class="button-css" placeholder="Type some words there" id="task2input" type="text"></textarea>
+    <textarea class="button-css" placeholder="Type some words there" id="task2input"></textarea>
     <button class="button-css" type="button" onclick="CountingDuplicates();">PRESS ME</button>
     <pre id="task2" class="result">Answer will appear this row</pre>
     <p>Task №3.</p>
@@ -259,7 +282,7 @@ return match ($num) {
         <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;После получения денег от клиента подать топливо нужно на правильную колонку</li>
         <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>&NonBreakingSpace;Учесть запасы топлива на колонке и момент когда топлива может быть недостаточно чтобы удовлетворить заказ клиента, в таком случае заправляем все что есть а сдачу отдаем</li>
     </ul>
-    <b>Result:</b>
+    <b id="lesson3task1">Result:</b>
     <p>1. Создаём класс User:
 <pre>
 class User{
@@ -324,13 +347,104 @@ $Volandemort->printStatus();
 $Harry->printStatus();
 ?>
 </pre>
-    <b>Result for Home task<sup>*</sup>:</b>
-    <pre>in progress..</pre>
+    <b id="lesson3task2">Result for Home task<sup>*</sup>:</b>
+
+<pre>Homie, welcome to our zapravka! Would u like to refuel your sunshine?
+We have 3 types of fuel:
+1. gasoline     22.50 UAH
+2. diesel       20.00 UAH
+3. gas          13.00 UAH
+We have:
+<?php
+echo 'gasoline  '.$ANP->getAmount(ai).'     litres amount<br>';
+echo 'diesel    '.$ANP->getAmount(dp).'     litres amount<br>';
+echo 'gas(ГАЗ)  '.$ANP->getAmount(gaz).'      litres amount<br>';
+?>
+Today sold [total cars <?=$ANP->getCarsNum();?>]:
+1. gasoline     <?=$ANP->getSoldMoney(ai);?>    <?=$ANP->getSoldVolume(ai)."\n";?>
+2. diesel       <?=$ANP->getSoldMoney(dp);?>    <?=$ANP->getSoldVolume(dp)."\n";?>
+3. gas          <?=$ANP->getSoldMoney(gaz);?>    <?=$ANP->getSoldVolume(gaz)."\n";?>
+</pre>
+</pre>
+
+<form method="post">
+    <label for="fuelType">Choose fuel type:</label>
+    <select class="button-css" name="fuelType" size="1" id="fuelType" onchange="preUpdate();">
+        <option value="0" selected>Бензин</option>
+        <option value="1">ДП</option>
+        <option value="2">Газ</option>
+    </select>
+    <label for="fuelVolume">Choose fuel volume:</label>
+    <input class="button-css"
+           min="1"
+           max="500"
+           maxlength="3"
+           id="fuelVolume"
+           name="fuelVolume"
+           title="Enter fuel volume from 1 to 500"
+           placeholder="Enter fuel volume"
+           oninput="this.value = this.value.replace(/\D/g, '').replace(/(\..*?)\..*/g, '$1');"
+           value="1"
+           onchange="preUpdate();"
+    >
+    <label for="clientName">Enter name if you want to be a Client:</label>
+    <input class="button-css"
+           minlength="2"
+           maxlength="20"
+           id="clientName"
+           name="clientName"
+           title="Enter name"
+           placeholder="Enter your name"
+           onchange="preUpdate();"
+    >
+
+    <b>Check information below:</b>
+    <pre id="task33b"></pre>
+    <b>Ok, now operator's task:</b>
+<pre>
+If Client want to be a new Client
+of zapravka - he should write his
+name, else just press "REFUEL"
+and take his money.
+</pre>
+    <button type="submit" class="button-css">Only Refuel</button>
+    <button type="submit" class="button-css" id="disabledButton">Create and Refuel</button>
+</form>
+
+<pre>
+Description:
+1. When operator press ONLY REFUEL
+it means that client didn't want
+to save his name so he just paid.
+2. When operator press CREATE AND REFUEL
+it means that new object of class Client
+was created and next time Client may
+choose himself from list.
+</pre>
+    <b>Client's list:</b>
+
 </div>
 <script>
     window.onload = function(){update();btnUpdate2();};
+
+    function preUpdate(){
+        let type = document.getElementById('fuelType').options[document.getElementById('fuelType').selectedIndex].value;
+        let volume = document.getElementById('fuelVolume').value;
+        let name = document.getElementById('clientName').value;
+
+        let paluvo = ["Бензин", "ДП", "Газ"];
+        let cost = [22.50, 20.00, 13.00];
+
+        if(name === 'no name'){
+            document.getElementById("disabledButton").disabled = true;
+        }
+
+        document.getElementById('task33b').innerText = "Тип топлива: " + paluvo[type] + "\n" + "Объём: " + volume + " л." + "\n" + "Имя: " + name +  "\n" + "Cost: " + (volume * cost[type]) + " UAH"
+
+    }
+
     function update() {
-        let select = document.getElementById('lesson1');
+        let select = document.getElementById('lesson1task1');
         let value = select.options[select.selectedIndex].value;
         let output = document.getElementById('date');
         $.ajax({
@@ -343,7 +457,6 @@ $Harry->printStatus();
             }
         });
     }
-
     function btnUpdate2() {
         let select = document.getElementById('lesson2a');
         let value = select.options[select.selectedIndex].value;
@@ -358,14 +471,13 @@ $Harry->printStatus();
             }
         });
     }
-
     let task1timer = setInterval(getTime, 1);
 
     function getTime(){
         let task1 = document.getElementById('task1');
-        let date = new Date();
+        let dateTime = new Date();
 
-        let h = date.getHours(), m = date.getMinutes(), s = date.getSeconds(), ms = date.getMilliseconds();
+        let h = dateTime.getHours(), m = dateTime.getMinutes(), s = dateTime.getSeconds(), ms = dateTime.getMilliseconds();
         let pass = ms + (s * 1000) + (m * 60 * 1000) + (h * 60 * 60 * 1000);
         task1.innerHTML = 'С полуночи прошло ' + pass + 'ms<br>' +
             '(' + h + 'h ' + m + 'm ' + s + 's ' + ms + 'ms)<br>' +

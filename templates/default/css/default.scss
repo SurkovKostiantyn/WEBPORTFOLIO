@@ -313,6 +313,12 @@ form {
   &::-ms-expand{
     display: none;
   }
+  &:disabled{
+    color: #414141;
+  }
+  &:disabled:hover{
+    background: none;
+  }
   &:hover{
     @include borders(2px);
     background: linear-gradient(to right bottom,
@@ -352,6 +358,10 @@ form {
   &:last-child{
     margin-bottom: 10px;
   }
+  & label{
+    margin: 0 20px;
+  }
+
   & > p, b {
     margin: 10px 20px;
   }

@@ -1,7 +1,6 @@
 <?php
 
-class Lessons
-{
+class Lessons{
     private array $list1 = array(
         array(
             "first_name" => "Noah",
@@ -62,5 +61,4 @@ class Lessons
             default => "".$this->likes[$id][0].", ".$this->likes[$id][1]." and ".($num - 2)." others likes this\n"
         };
     }
-
 }

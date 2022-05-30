@@ -6,6 +6,8 @@
 
     include_once 'includes/autoload.php';   // загрузка классов
 
+    include_once 'includes/classes/zapravka/Zapravka.php';
+
     include_once 'includes/elements/head.php';
     include_once 'includes/elements/header.php';
     include_once 'includes/elements/nav.php';

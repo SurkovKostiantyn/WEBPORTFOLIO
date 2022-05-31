@@ -258,6 +258,14 @@ form > button {
   background: #f2e5ec;
 }
 
+.a-arrow:before {
+  font-family: FontAwesome, sans-serif;
+  content: "\f061";
+  color: #00C853;
+  padding-right: 3px;
+  font-weight: 900;
+}
+
 .button-css {
   text-align: center;
   display: block;

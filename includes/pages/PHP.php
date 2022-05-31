@@ -24,26 +24,26 @@ if(isset($_POST['checked'])){
 <div class="content">
     <h3>List:</h3>
     <ul>
-        <li><a href="#lesson1"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 1</a></li>
-        <li><a href="#lesson2"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 2</a></li>
+        <li><a href="#lesson1" class="a-arrow">Lesson 1</a></li>
+        <li><a href="#lesson2" class="a-arrow">class="a-arrow">Lesson 2</a></li>
         <li>
-            <a href="#lesson3"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 3</a>
-            <a href="#lesson3task1"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Home task 1</a>
-            <a href="#lesson3task2"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Home task 2</a>
+            <a href="#lesson3" class="a-arrow">Lesson 3</a>
+            <a href="#lesson3task1" class="a-arrow">Home task 1</a>
+            <a href="#lesson3task2" class="a-arrow">Home task 2</a>
         </li>
-        <li><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Lesson 4</a></li>
+        <li><a href="#"class="a-arrow">Lesson 4</a></li>
     </ul>
     <hr>
     <h3 id="lesson1">Lesson 1</h3>
     <b>Presentation:</b>
-    <a href="https://docs.google.com/presentation/d/1vStwVV_O-Ydzg9oo4fAwOq3tqDCdNf3ucCLevCqEsJQ/edit?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Google Disk</a>
+    <a href="https://docs.google.com/presentation/d/1vStwVV_O-Ydzg9oo4fAwOq3tqDCdNf3ucCLevCqEsJQ/edit?usp=sharing" target="_blank"class="a-arrow">Google Disk</a>
     <b>Theory:</b>
-    <a href="https://github.com/nesh-ua/onix-academy-php/tree/master/lessons/lesson-01" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Github</a>
+    <a href="https://github.com/nesh-ua/onix-academy-php/tree/master/lessons/lesson-01" target="_blank" class="a-arrow">Github</a>
     <b>Recommended links:</b>
-    <a href="https://www.jetbrains.com/phpstorm/promo/" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Редактор кода для РНР</a>
-    <a href="https://www.php.net/manual/ru/index.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Документация по РНР</a>
-    <a href="https://www.php.net/manual/ru/ini.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Описание директив php.ini</a>
-    <a href="https://www.php.net/manual/ru/extensions.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Список/классификация модулей PHP</a>
+    <a href="https://www.jetbrains.com/phpstorm/promo/" target="_blank" class="a-arrow">Редактор кода для РНР</a>
+    <a href="https://www.php.net/manual/ru/index.php" target="_blank" class="a-arrow">Документация по РНР</a>
+    <a href="https://www.php.net/manual/ru/ini.php" target="_blank" class="a-arrow">Описание директив php.ini</a>
+    <a href="https://www.php.net/manual/ru/extensions.php" target="_blank" class="a-arrow">Список/классификация модулей PHP</a>
     <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Home task:</b>
     <ul>
         <li>
@@ -60,7 +60,7 @@ if(isset($_POST['checked'])){
         </li>
     </ul>
     <b>Result:</b>
-    <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/PHP.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check Github</a>
+    <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/PHP.php" target="_blank" class="a-arrow">Check Github</a>
 
     <select class="button-css" name="formats" size="1" id="lesson1task1" onChange="update();">
         <option selected value="Y - m - d"  >2022 - 01 - 01</option>
@@ -75,11 +75,11 @@ if(isset($_POST['checked'])){
     <hr>
     <h3 id="lesson2">Lesson 2</h3>
     <b>Presentation:</b>
-    <a href="https://drive.google.com/file/d/17JDIiRgV1_MHxcnPam8InS4akKl97f9J/view?usp=sharing" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Google Disk</a>
+    <a href="https://drive.google.com/file/d/17JDIiRgV1_MHxcnPam8InS4akKl97f9J/view?usp=sharing" target="_blank" class="a-arrow">Google Disk</a>
     <b>Theory:</b>
-    <a href="https://github.com/nesh-ua/onix-academy-php/blob/master/lessons/lesson-02/" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Github</a>
+    <a href="https://github.com/nesh-ua/onix-academy-php/blob/master/lessons/lesson-02/" target="_blank" class="a-arrow">Github</a>
     <b>Recommended links:</b>
-    <a href="https://www.php.net/manual/ru/language.types.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;www.php.net</a>
+    <a href="https://www.php.net/manual/ru/language.types.php" target="_blank" class="a-arrow">www.php.net</a>
     <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Home task:</b>
     <ul>
         <li>
@@ -159,7 +159,7 @@ $list1 = [
         </li>
     </ul>
     <b>Result:</b>
-    <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/PHP.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Check Github</a>
+    <a href="https://github.com/SurkovKostiantyn/WEBPORTFOLIO/blob/main/includes/pages/PHP.php" target="_blank" class="a-arrow">Check Github</a>
 
     <p>Task №1.</p>
     <b>Method #1 (JS)</b>
@@ -239,19 +239,19 @@ return match ($num) {
     <hr>
     <h3 id="lesson3">Lesson 3</h3>
     <b>Video:</b>
-    <a href="https://drive.google.com/file/d/1I-EyWy_ymkCw7c-rDWxMvtI6Ucqt0Ijs/view" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Google Disk</a>
+    <a href="https://drive.google.com/file/d/1I-EyWy_ymkCw7c-rDWxMvtI6Ucqt0Ijs/view" target="_blank" class="a-arrow">Google Disk</a>
     <b>Theory:</b>
-    <a href="https://github.com/nesh-ua/onix-academy-php/blob/master/lessons/lesson-03/theory.md" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Github</a>
+    <a href="https://github.com/nesh-ua/onix-academy-php/blob/master/lessons/lesson-03/theory.md" target="_blank" class="a-arrow">Github</a>
     <b>Recommended links:</b>
-    <a href="https://www.php.net/manual/ru/oop5.intro.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Введение</a>
-    <a href="https://www.php.net/manual/ru/language.oop5.basic.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Основы</a>
-    <a href="https://www.php.net/manual/ru/language.oop5.properties.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Свойства</a>
-    <a href="https://www.php.net/manual/ru/language.oop5.constants.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Константы классов</a>
-    <a href="https://www.php.net/manual/ru/language.oop5.decon.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Конструкторы и деструкторы</a>
-    <a href="https://www.php.net/manual/ru/language.oop5.visibility.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Область видимости</a>
-    <a href="https://www.php.net/manual/ru/language.oop5.inheritance.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Наследование</a>
-    <a href="https://www.php.net/manual/ru/language.oop5.paamayim-nekudotayim.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Оператор разрешения области видимости (::)</a>
-    <a href="https://www.php.net/manual/ru/language.oop5.static.php" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Ключевое слово static</a>
+    <a href="https://www.php.net/manual/ru/oop5.intro.php" target="_blank" class="a-arrow">Введение</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.basic.php" target="_blank" class="a-arrow">Основы</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.properties.php" target="_blank" class="a-arrow">Свойства</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.constants.php" target="_blank" class="a-arrow">Константы классов</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.decon.php" target="_blank" class="a-arrow">Конструкторы и деструкторы</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.visibility.php" target="_blank" class="a-arrow">Область видимости</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.inheritance.php" target="_blank" class="a-arrow">Наследование</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.paamayim-nekudotayim.php" target="_blank" class="a-arrow">Оператор разрешения области видимости (::)</a>
+    <a href="https://www.php.net/manual/ru/language.oop5.static.php" target="_blank" class="a-arrow">Ключевое слово static</a>
     <b><i class="fa fa-list" aria-hidden="true"></i>&NonBreakingSpace;Home task:</b>
     <ul>
         <li>
@@ -365,9 +365,9 @@ echo 'diesel    '.$ANP->getAmount(dp).'     litres amount<br>';
 echo 'gas(ГАЗ)  '.$ANP->getAmount(gaz).'      litres amount<br>';
 ?>
 Today sold [total cars <?=$ANP->getCarsNum();?>]:
-1. gasoline     <?=$ANP->getSoldMoney(ai);?>    <?=$ANP->getSoldVolume(ai)."\n";?>
-2. diesel       <?=$ANP->getSoldMoney(dp);?>    <?=$ANP->getSoldVolume(dp)."\n";?>
-3. gas          <?=$ANP->getSoldMoney(gaz);?>    <?=$ANP->getSoldVolume(gaz)."\n";?>
+1. gasoline     <?=$ANP->getSoldMoney(ai);?> UAH   <?=$ANP->getSoldVolume(ai)." litres\n";?>
+2. diesel       <?=$ANP->getSoldMoney(dp);?> UAH   <?=$ANP->getSoldVolume(dp)." litres\n";?>
+3. gas          <?=$ANP->getSoldMoney(gaz);?> UAH   <?=$ANP->getSoldVolume(gaz)." litres\n";?>
 </pre>
 </pre>
 

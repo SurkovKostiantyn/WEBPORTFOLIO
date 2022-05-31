@@ -187,6 +187,8 @@ in css file:
     <h3 id="lesson4">Lesson 4</h3>
     <b>Presentation:</b>
     <a href="https://docs.google.com/presentation/d/1ugrXloPko4La4EAY896lec530oqTLPLdJFIzN8PN2MU/edit#slide=id.p" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Google Disk</a>
+    <b>Video:</b>
+    <a href="https://drive.google.com/file/d/11Puphl73QQ2sLKFRYT80801AAnSQBfJN/view" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;Google Disk</a>
     <b>Recommended links:</b>
     <a href="https://semantica.in/blog/chto-takoe-adaptivnost-sajta.html" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;semantica.in</a>
     <a href="https://itchief.ru/html-and-css/vendor-prefixes" target="_blank"><i class="fa fa-arrow-right" aria-hidden="true"></i>&NonBreakingSpace;itchief.ru</a>

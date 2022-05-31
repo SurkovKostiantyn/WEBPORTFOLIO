@@ -114,10 +114,11 @@ class Zapravka{ // $ANP = new Zapravka() - создать заправку.
                 $query2 = "SELECT `clients`.`id` FROM `clients` WHERE `clients`.`client_name` = '".$name."';";
                 $result2 = mysqli_query($link, $query2);
 
-
                 if(!$result2){ // если нет такого имени, то создаём объект, а в объекте уже сейвится в БД
+                    var_dump('if');
                     new Client(floatval($this->cost[$type] * $volume) * 0.05,$type, $name);
                 }else{
+                    var_dump('else');
                     $query = "UPDATE    `clients`
                               SET       `clients`.`bonuses` = `clients`.`bonuses` + ".(floatval($this->cost[$type] * $volume) * 0.05)."
                               WHERE     `clients`.`client_name` = '".$name."';";

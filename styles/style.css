@@ -95,7 +95,7 @@ header a.active{
 }
 header a.menu{
     float: right;
-    margin: 20px 0 auto 10px;
+    margin: 0 0 auto 10px;
     font-weight: 700;
 }
 .content{
@@ -104,7 +104,17 @@ header a.menu{
 input{
     font-family: Arial, FontAwesome, sans-serif;
 }
-input:focus{
+
+input[type="search"]:before{
+    content: "test";
+    color: red;
+    font-size: 14px;
+    display: block;
+    bottom: 0;
+    top: 0;
+}
+
+input:focus {
     background: rgba(212, 163, 115, 0.27);
     transition: 0.3s;
 }

@@ -1,0 +1,226 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+html, body {
+  margin: 0;
+}
+
+header {
+  width: 1440px;
+  height: 600px;
+  background: #343A40 url("../images/Image.png") no-repeat center center;
+  margin: 0 auto;
+  position: relative;
+}
+header nav {
+  width: 1440px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo {
+  font: 700 20px/22px "Spartan", sans-serif;
+  color: #F8F9FA;
+  margin-left: 50px;
+}
+header nav ul {
+  margin-right: 50px;
+}
+header nav ul li {
+  display: inline-block;
+  margin-right: 23px;
+}
+header nav ul li .menu {
+  font: 700 12px/14px "Roboto", sans-serif;
+  color: #E5E5E5;
+  padding-bottom: 9px;
+}
+header nav ul li .active {
+  border-bottom: 2px solid #D4A373;
+  color: #FFF;
+}
+header .header-text {
+  font: 700 36px/46px "Lora", serif;
+  color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(70px, 252px);
+  -webkit-transform: translate(70px, 252px);
+  -moz-transform: translate(70px, 252px);
+  -ms-transform: translate(70px, 252px);
+  -o-transform: translate(70px, 252px);
+}
+
+.content {
+  margin: 0 auto;
+  width: 1440px;
+}
+.content .news {
+  margin: 100px 70px 0 70px;
+}
+.content .news .news-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  color: #495057;
+}
+.content .news .news-header h3 {
+  font: 700 36px/46px "Lora", serif;
+}
+.content .news .news-header a {
+  font: 700 12px/25px "Lora", serif;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.content .news .news-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+.content .news .news-body .news-item {
+  margin-top: 50px;
+  width: 310px;
+}
+.content .news .news-body .news-item img {
+  width: 310px;
+  height: 280px;
+}
+
+.below {
+  background: #343A40 url("../images/Image2.png") no-repeat center center;
+  height: 600px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.below .below-text {
+  font: 700 36px/46px "Lora", serif;
+  color: #FFF;
+}
+.below .below-text-small {
+  font: 700 12px/20px "Lora", serif;
+  color: #E5E5E5;
+  margin-top: 13px;
+}
+
+footer {
+  width: 1440px;
+  margin: 0 auto;
+}
+footer .footer-body {
+  width: 100%;
+  height: 400px;
+  background: #212529;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer .footer-body .footer-blocks {
+  margin-top: 106px;
+  width: 300px;
+}
+footer .footer-body .footer-blocks h4 {
+  font: 700 18px/25px "Lora", serif;
+  color: #FFF;
+  margin-bottom: 15px;
+}
+footer .footer-body .footer-blocks p {
+  font: 400 12px/15px "Lora", serif;
+  color: #E5E5E5;
+  margin-bottom: 18px;
+}
+footer .footer-body .footer-blocks ul {
+  color: #E5E5E5;
+  font: 400 12px/15px "Lora", serif;
+}
+footer .footer-body .footer-blocks ul li {
+  margin-bottom: 18px;
+}
+footer .footer-body .footer-blocks img {
+  margin-right: 18px;
+}
+footer .footer-bottom {
+  width: 100%;
+  height: auto;
+  background: #343A40;
+}
+footer .footer-bottom p {
+  padding: 31px 60px;
+  color: #E5E5E5;
+  font: 700 14px/18px "Lora", serif;
+}
+
+p.date {
+  font: 400 12px/15px "Lora", serif;
+  color: #6C757D;
+  margin-top: 15px;
+}
+
+p.title {
+  font: 700 18px/25px "Lora", serif;
+  color: #495057;
+  margin-top: 15px;
+}
+
+p.text {
+  font: 400 12px/15px "Lora", serif;
+  color: #6C757D;
+  margin-top: 15px;
+}
+
+span.br {
+  display: block;
+}
+
+/*# sourceMappingURL=mystyles.css.map */

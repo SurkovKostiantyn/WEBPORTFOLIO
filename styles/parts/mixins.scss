@@ -41,6 +41,19 @@
   }
 }
 
+@mixin adaptiveMargin2{
+  max-width: min(860px, calc(100% - 140px));
+  @media #{$phones-big}{
+    max-width: calc(100% - 100px);
+  }
+  @media #{$phones}{
+    max-width: calc(100% - 80px);
+  }
+  @media #{$phones-mini}{
+    max-width: calc(100% - 50px);
+  }
+}
+
 @mixin flexProperty{
   @content;
 }

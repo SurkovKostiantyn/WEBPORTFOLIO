@@ -1,6 +1,28 @@
 @import 'variables.scss';
+@import "mixins.scss";
 
 .active{
   border-bottom: 2px solid #D4A373;
   color: $whiteColor;
+}
+
+.cover{
+  object-fit: cover;
+}
+
+.quote{
+  display: block;
+  color: $qabachoq;
+  font: bold 36px/46px $fontLora;
+  margin: 25px 0;
+}
+
+.created{
+  display: block;
+  margin: 55px 0 42px 0;
+  font-weight: bold;
+}
+
+.strong{
+  font-weight: bold;
 }

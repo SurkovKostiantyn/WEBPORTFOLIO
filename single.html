@@ -15,13 +15,13 @@
     <script src="https://kit.fontawesome.com/a7c1eeb7ad.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header-main">
+    <header class="header-main" id="header">
         <div class="header-main-block">
             <img class="cover" src="/images/Image5.png" alt="5">
         </div>
         <div class="header-main-text newsPage">Richird Norton photorealistic<span class="br"></span>rendering as real photos<span class="br"></span><div class="small-text">Progressively incentivize cooperative systems through technically sound<span class="br"></span>functionalities. The credibly productivate seamless data.</div></div>
     </header>
-    <nav>
+    <nav id="navbar">
         <div class="nav-block">
             <a href="index.html" class="nav-block-logo">RUNO</a>
             <ul>
@@ -139,6 +139,19 @@
             </div>
         </div>
     </footer>
-
-</body>
+    <script type="text/javascript">
+        const header = document.querySelector('#header');
+        const nav = document.querySelector('#navbar');
+        const callback = ([entry]) => {
+            const { isIntersecting } = entry;
+            nav.classList.toggle('navOpacity', !isIntersecting);
+        };
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.0
+        };
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(header);
+    </script></body>
 </html>

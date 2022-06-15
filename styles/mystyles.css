@@ -295,25 +295,24 @@ html, body {
   max-width: 100vw;
 }
 
-.header-main {
-  margin: 0 auto;
-  position: relative;
-}
-.header-main nav {
+nav {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   padding: 29px 0;
   background: rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
   z-index: 10;
 }
 @media only screen and (max-width: 767px) {
-  .header-main nav {
+  nav {
     position: unset;
     background: rgba(0, 0, 0, 0.8);
   }
 }
-.header-main nav .nav-block {
+nav .nav-block {
   margin: 0 auto;
   max-width: min(1300px, 100% - 140px);
   display: flex;
@@ -321,32 +320,37 @@ html, body {
   align-items: center;
 }
 @media only screen and (max-width: 565px) {
-  .header-main nav .nav-block {
+  nav .nav-block {
     max-width: calc(100% - 100px);
   }
 }
 @media only screen and (max-width: 400px) {
-  .header-main nav .nav-block {
+  nav .nav-block {
     max-width: calc(100% - 80px);
   }
 }
 @media only screen and (max-width: 400px) {
-  .header-main nav .nav-block {
+  nav .nav-block {
     max-width: calc(100% - 50px);
   }
 }
-.header-main nav .nav-block-logo {
+nav .nav-block-logo {
   font: 700 20px/22px "Spartan", sans-serif;
   color: #F8F9FA;
 }
-.header-main nav .nav-block li {
+nav .nav-block li {
   display: inline-block;
   margin-left: 23px;
 }
-.header-main nav .nav-block-menu {
+nav .nav-block-menu {
   font: 700 12px/14px "Roboto", sans-serif;
   color: #E5E5E5;
   padding-bottom: 9px;
+}
+
+.header-main {
+  margin: 0 auto;
+  position: relative;
 }
 @media only screen and (max-width: 767px) {
   .header-main-block {
@@ -1001,6 +1005,13 @@ footer .footer-bottom-div .normal {
 
 .strong {
   font-weight: bold;
+}
+
+.navOpacity {
+  background: rgba(0, 0, 0, 0.9) !important;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
 }
 
 p.date {

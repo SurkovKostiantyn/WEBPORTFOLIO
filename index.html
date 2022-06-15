@@ -15,16 +15,7 @@
     <script src="https://kit.fontawesome.com/a7c1eeb7ad.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header-main">
-        <nav>
-            <div class="nav-block">
-                <a href="index.html" class="nav-block-logo">RUNO</a>
-                <ul>
-                    <li><a class="nav-block-menu active" href="index.html">Home</a></li>
-                    <li><a class="nav-block-menu" href="news.html">News</a></li>
-                </ul>
-            </div>
-        </nav>
+    <header class="header-main" id="header">
         <div class="header-main-block">
             <img src="/images/Image.png" alt="1">
             <img src="/images/Image2.png" alt="2">
@@ -33,6 +24,16 @@
         </div>
         <p class="header-main-text">Richird Norton photorealistic<span class="br"></span>rendering as real photos</p>
     </header>
+
+    <nav id="navbar">
+        <div class="nav-block">
+            <a href="index.html" class="nav-block-logo">RUNO</a>
+            <ul>
+                <li><a class="nav-block-menu active" href="index.html">Home</a></li>
+                <li><a class="nav-block-menu" href="news.html">News</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="content-news">
         <div class="content-news-header">
@@ -153,6 +154,21 @@
             dots: true,
             autoplay: true,
             autoplaySpeed: 2000});
+
+
+        const header = document.querySelector('#header');
+        const nav = document.querySelector('#navbar');
+        const callback = ([entry]) => {
+            const { isIntersecting } = entry;
+            nav.classList.toggle('navOpacity', !isIntersecting);
+        };
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.0
+        };
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(header);
     </script>
 </body>
 

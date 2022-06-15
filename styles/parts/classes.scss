@@ -26,3 +26,8 @@
 .strong{
   font-weight: bold;
 }
+
+.navOpacity{
+  background: transparentize(#000, 0.1) !important;
+  @include transition(.4s);
+}

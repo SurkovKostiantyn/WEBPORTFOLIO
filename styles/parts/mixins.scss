@@ -1,4 +1,6 @@
+@use 'sass:math';
 @import 'variables.scss';
+
 
 @mixin adaptiveFont($font-weight, $font-size, $line-height, $font-family){
   font-weight: $font-weight;
@@ -19,7 +21,7 @@
   padding: $value 0;
   $value2: $value;
   @for $i from 1 through 10{
-    $value2: round($value2 - $value2 * 1px / 10px);
+    $value2: round($value2 - math.div($value2 * 1px , 10px));
     $maxWidth: calc(1399px - #{$i}*100px);
     @media screen and (max-width: $maxWidth){
       padding: $value2 0;

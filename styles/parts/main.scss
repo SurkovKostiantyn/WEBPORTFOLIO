@@ -15,7 +15,8 @@ nav {
   @include transition(.4s);
   z-index: 10;
   @media #{$tablets}{
-    position: unset;
+    position: sticky;
+    top: 0;
     background: transparentize(#000, 0.2);
   }
   .nav-block {

@@ -1,7 +1,6 @@
 @use 'sass:math';
 @import 'variables.scss';
 
-
 @mixin adaptiveFont($font-weight, $font-size, $line-height, $font-family){
   font-weight: $font-weight;
   font-size: $font-size;
@@ -31,33 +30,91 @@
 
 @mixin adaptiveMargin{
   margin: 0 auto;
-  max-width: min(1300px, calc(100% - 140px));
-  @media #{$phones-big}{
-    max-width: calc(100% - 100px);
-  }
+  width: min(90%, 1300px);
   @media #{$phones}{
-    max-width: calc(100% - 80px);
+    margin: 0 min(20px, 5%);
+    width: min(calc(100vw - 40px), 90%);
   }
-  @media #{$phones-mini}{
-    max-width: calc(100% - 50px);
+}
+
+@mixin adaptiveMarginLeft{
+  margin-left: max(5%, calc((100% - 1300px) / 2));
+  @media #{$phones}{
+    margin-left: min(20px, 5%);
+  }
+}
+
+@mixin adaptiveMarginRight{
+  margin-right: max(5%, calc((100% - 1300px) / 2));
+  @media #{$phones}{
+    margin-right: min(20px, 5%);
   }
 }
 
 @mixin adaptiveMargin2{
-  max-width: min(860px, calc(100% - 140px));
-  @media #{$phones-big}{
-    max-width: calc(100% - 100px);
-  }
+  margin: 0 auto;
+  width: min(90%, 860px);
   @media #{$phones}{
-    max-width: calc(100% - 80px);
-  }
-  @media #{$phones-mini}{
-    max-width: calc(100% - 50px);
+    margin: 0 min(20px, 5%);
+    width: min(calc(100vw - 40px), 90%);
   }
 }
 
-@mixin flexProperty{
-  @content;
+@mixin flex{
+  display: flex;
+}
+
+@mixin flex-footer-body{
+  @include flex;
+  display: flex; flex-wrap: wrap; justify-content: space-evenly;
+}
+
+@mixin flex-footer-bottom{
+  @include flex;
+  justify-content: space-between;
+}
+
+@mixin flex-navbar{
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-content-news-header{
+  @include flex;
+  justify-content: space-between;
+}
+
+@mixin flex-content-author {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-content-author-profile{
+  @include flex;
+  align-items: center;
+}
+
+@mixin flex-content-below {
+  @include flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-content-news-body{
+  @include flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media #{$tablets-big}{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  @media #{$phones}{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 @mixin image-2x($image) {
@@ -68,46 +125,6 @@
   (min-resolution: 1.3dppx) {
     background: url($image) no-repeat;
   }
-}
-
-@mixin gradient-border-with-radius($left, $right) {
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, $left, $right);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  @include transition($transition);
-}
-
-@mixin gradient-border($left, $right) {
-  -moz-border-image: -moz-linear-gradient(top, $left 0%, $right 100%);
-  -webkit-border-image: -webkit-linear-gradient(top, $left 0%, $right 100%);
-  border-image-source: linear-gradient(to bottom, $left 0%, $right 100%);
-  background-clip: padding-box;
-  border-image-slice: 1;
-}
-
-@mixin text-gradient ($left, $right) {
-  background: -webkit-linear-gradient(0deg, $left 0%, $right 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@mixin apptidy-text-gradient ($left,$middle, $right) {
-  background: -webkit-linear-gradient( -4deg, $left 0%, $middle 44%, $right 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@mixin gradient-left-right($leftColor, $rightColor) {
-  background-image: -moz-linear-gradient( 0deg, $leftColor 0%, $rightColor 100%);
-  background-image: -webkit-linear-gradient( 0deg, $leftColor 0%, $rightColor 100%);
-  background-image: -ms-linear-gradient( 0deg, $leftColor 0%, $rightColor 100%);
-}
-
-@mixin gradient-top-bottom($from, $to) {
-  background-color: $from;
-  background-image: -moz-linear-gradient($from, $to);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
-  background-image: -webkit-linear-gradient($from, $to);
-  background-image: -o-linear-gradient($from, $to);
 }
 
 // Single side border-radius
@@ -333,26 +350,4 @@
   -moz-animation-direction: $direction;
   -o-animation-direction: $direction;
   animation-direction: $direction;
-}
-
-@mixin skewX($deg) {
-  -moz-transform: skewX($deg);
-  -webkit-transform: skewX($deg);
-  -o-transform: skewX($deg);
-  -ms-transform: skewX($deg);
-  transform: skewX($deg);
-}
-
-@mixin skewY($deg) {
-  -moz-transform: skewY($deg);
-  -webkit-transform: skewY($deg);
-  -o-transform: skewY($deg);
-  -ms-transform: skewY($deg);
-  transform: skewY($deg);
-}
-
-@mixin apptidygd($left,$right) {
-  background-image: -moz-linear-gradient( 55deg, $left 0%, $right);
-  background-image: -webkit-linear-gradient( 55deg, $left 0%, $right);
-  background-image: -ms-linear-gradient( 55deg, $left 0%, $right);
 }

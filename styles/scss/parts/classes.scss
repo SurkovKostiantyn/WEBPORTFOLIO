@@ -1,6 +1,4 @@
-@import 'variables.scss';
-@import "mixins.scss";
-
+//noinspection ALL
 .active{
   border-bottom: 2px solid #D4A373;
   color: $whiteColor;
@@ -19,7 +17,7 @@
 
 .created{
   display: block;
-  margin: 55px 0 42px 0;
+  margin: min(55px, 4vw) 0 0 0;
   font-weight: bold;
 }
 
@@ -30,4 +28,8 @@
 .navOpacity{
   background: transparentize(#000, 0.1) !important;
   @include transition(.4s);
+}
+
+.hoverable:hover{
+
 }

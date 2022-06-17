@@ -1,16 +1,16 @@
-@import 'variables.scss';
-@import 'mixins.scss';
-
+//noinspection ALL
 p.date{
   font: 400 12px/15px 'Lora', serif;
   color: $hBodyTextColor2;
   margin-top: 15px;
 }
+//noinspection ALL
 p.title{
   font: 700 18px/25px 'Lora', serif;
   color: $hBodyTextColor;
   margin-top: 15px;
 }
+//noinspection ALL
 p.text{
   font: 400 12px/15px 'Lora', serif;
   color: $hBodyTextColor2;
@@ -24,9 +24,14 @@ span.br{
 span.double{
   margin-bottom: 25px;
 }
-
-a:hover{
+//noinspection ALL
+a.scaleable:hover{
   @include scale(1.05);
+  @include transition(.2s);
+}
+//noinspection ALL
+a.hoverable:hover{
+  color: transparentize(#D4A373, 0.1);
   @include transition(.2s);
 }
 

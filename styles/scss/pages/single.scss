@@ -57,6 +57,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     grid-gap: 50px 20px;
+    @media #{$phones-big} {
+      grid-gap: min(50px, 6vw) 20px;
+    }
     &-item{
       img {
         object-fit: cover;

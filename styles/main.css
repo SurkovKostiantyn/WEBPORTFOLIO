@@ -874,6 +874,11 @@ footer .footer-bottom-div .normal {
     width: min(100vw - 40px, 90%);
   }
 }
+@media only screen and (max-width: 565px) {
+  .content-related-posts {
+    grid-gap: min(50px, 6vw) 20px;
+  }
+}
 .content-related-posts-item img {
   object-fit: cover;
   width: 100%;

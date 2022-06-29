@@ -1,4 +1,4 @@
-const header = document.querySelector('#header');
+const header = document.querySelector('#banner');
 const nav = document.querySelector('#navbar');
 const callback = ([entry]) => {
     const { isIntersecting } = entry;
@@ -6,7 +6,7 @@ const callback = ([entry]) => {
 };
 const options = {
     root: null,
-    rootMargin: '0px',
+    rootMargin: '-80px',
     threshold: 0.0
 };
 const observer = new IntersectionObserver(callback, options);

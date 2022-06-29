@@ -9,22 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/admin.min.css">
     <script src="https://kit.fontawesome.com/a7c1eeb7ad.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <a href="articles.html" class="logo">RUNO</a>
-        <a href="login.html" class="menu">Logout</a>
-        <a href="#" class="menu active">Articles</a>
+    <header class="header-articles">
+        <a href="articles.html" class="header-articles-logo">RUNO</a>
+        <div>
+            <a href="articles.html" class="header-articles-link active">Articles</a>
+            <a href="login.html" class="header-articles-link">Login</a>
+        </div>
     </header>
-    <div class="content">
+    <div class="content-articles">
         <h4>Home</h4>
         <h1>Article List</h1>
         <input class="btn search" type="search" placeholder="&#xf002; Search Article">
         <a href="#" class="btn add">&#xf067; Add New Article</a>
 
-        <table class="t-adaptive">
+        <table class="content-articles-table">
             <thead>
                 <tr>
                     <td>
@@ -71,8 +73,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -95,8 +97,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -119,8 +121,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -143,8 +145,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -167,8 +169,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -191,8 +193,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -215,8 +217,8 @@
                         Published
                     </td>
                     <td>
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -239,8 +241,8 @@
                         Published
                     </td>
                     <td>
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -263,8 +265,8 @@
                         Published
                     </td>
                     <td>
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -287,8 +289,8 @@
                         Published
                     </td>
                     <td>
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -311,8 +313,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -335,8 +337,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -359,8 +361,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -383,8 +385,8 @@
                         Published
                     </td>
                     <td  >
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -407,8 +409,8 @@
                         Published
                     </td>
                     <td>
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -431,8 +433,8 @@
                         Published
                     </td>
                     <td>
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -455,8 +457,8 @@
                         Published
                     </td>
                     <td>
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -479,8 +481,8 @@
                         Published
                     </td>
                     <td>
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -503,8 +505,8 @@
                         Published
                     </td>
                     <td>
-                        <a href="#" class="table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
-                        <a href="#" class="table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>&NonBreakingSpace;
+                        <a href="#" class="content-articles-table-link"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
             </tbody>

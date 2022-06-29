@@ -1,0 +1,141 @@
+@import 'admin_variables.scss';
+
+.content-login{
+  margin:0 auto;
+  padding: 0;
+  display: flex;
+  max-width: 1440px;
+  &-remember{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    &-checkbox{
+      display: flex;
+      align-items: center;
+      label{
+        font: 400 14px/16px $fontLora;
+      }
+    }
+  }
+  &-h1{
+    margin: 0 auto 30px auto;
+    width: calc(100% - 80px);
+    max-width: 400px;
+    font-size: 36px;
+    @media #{$tablets-big} {
+      font-size: 32px;
+    }
+    @media #{$tablets} {
+      font-size: 28px;
+    }
+    @media #{$phones-big} {
+      font-size: 24px;
+    }
+    @media #{$phones} {
+      font-size: 22px;
+      text-align: center;
+      width: calc(100% - 20px);
+    }
+    @media #{$phones-mini} {
+      width: 100vw;
+    }
+  }
+  &-logo{
+    display: block;
+    font: 700 40px/44px $fontSpartan;
+    margin: 97px auto;
+    width: calc(100% - 80px);
+    max-width: 400px;
+    @media #{$phones-big} {
+      margin: 40px auto;
+    }
+    @media #{$phones} {
+      text-align: center;
+      margin: 20px auto;
+    }
+  }
+  &-left-block, &-right-block {
+    width: 50vw;
+  }
+  &-left-block{
+    position: relative;
+    background: url(../images/bg.png) no-repeat scroll top;
+    background-size: cover;
+    @media #{$tablets} {
+      display: none;
+    }
+    &:before{
+      position: absolute;
+      content: '';
+      background-image: url(../images/logo.png);
+
+      margin: auto;
+      display: block;
+      bottom: 0;
+      top: 0;
+      left: 50%;
+      @include translate(-50%, 0);
+
+      width: 180px;
+      height: 80px;
+    }
+    @media #{$tablets} {
+      margin: 0 auto;
+      width: 80vw;
+    }
+  }
+  &-right-block{
+    padding: 0;
+    form{
+      margin: 0 auto 97px auto;
+      width: calc(100% - 80px);
+      max-width: 400px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      input[type="text"], input[type="password"]{
+        padding: 10px 12px;
+        font: 400 14px/24px $fontLora;
+        margin-bottom: 24px;
+      }
+    }
+    @media #{$tablets} {
+      width: 100vw;
+    }
+    @media #{$phones-mini} {
+      width: 100vw;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  margin-right: 18px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  color: $black;
+  border: 1px solid $gray;
+  border-radius: 2px;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+  &:checked {
+    color: $white;
+    border-color: $lightgray;
+    background: $gray;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .add{
+    display: block;
+    width: 180px;
+    margin-top: 10px;
+  }
+  .search{
+    width: 204px;
+  }
+  .content{
+    margin: 10px 30px;
+  }
+}

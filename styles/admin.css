@@ -1,0 +1,356 @@
+/**
+* description:
+* This is the stylesheet for pages articles (admin).
+*/
+body, html {
+  margin: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+}
+
+input {
+  font-family: Arial, FontAwesome, sans-serif;
+  border: 1px solid rgba(114, 114, 114, 0.2);
+  padding: 10px;
+  margin: 0;
+}
+input:focus {
+  background: rgba(212, 163, 115, 0.27);
+  transition: 0.3s;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.search {
+  border: 1px solid rgba(114, 114, 114, 0.2);
+  padding: 10px;
+  width: 300px;
+}
+
+.google {
+  color: white;
+  border: 2px solid black;
+  background: black;
+  margin: 0 0 20px 0;
+}
+.google:hover {
+  background: grey;
+  border: 2px solid grey;
+  transition: 0.3s;
+}
+
+.add {
+  font-family: Arial, FontAwesome, sans-serif;
+  border: 2px solid #D4A373;
+  background: #D4A373;
+  color: white;
+  float: right;
+  margin: 0 0 20px 0;
+}
+.add:hover {
+  background: #836847;
+  border: 2px solid #836847;
+  transition: 0.3s;
+}
+
+.sign {
+  font-family: Arial, FontAwesome, sans-serif;
+  border: 2px solid #D4A373;
+  background: #D4A373;
+  color: white;
+  float: right;
+  margin: 0 0 20px 0;
+}
+.sign:hover {
+  background: #836847;
+  border: 2px solid #836847;
+  transition: 0.3s;
+}
+
+.label {
+  margin: 0 0 10px 0;
+  font: 400 14px/16px "Lora", serif;
+  vertical-align: text-top;
+}
+
+form p {
+  font: 400 14px/24px "Lora", serif;
+  margin: 0;
+}
+
+form p a {
+  text-align: right;
+}
+
+.a-link {
+  font: 400 14px/24px "Lora", serif;
+  color: #D4A373;
+}
+
+.header-articles {
+  padding: 20px 40px;
+  border-top: 2px solid rgba(114, 114, 114, 0.2);
+  border-bottom: 2px solid rgba(114, 114, 114, 0.2);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.header-articles-logo {
+  font: 700 24px/24px "Spartan", sans-serif;
+}
+.header-articles-link {
+  margin: 0 0 auto 10px;
+  font-weight: 700;
+}
+.header-articles .active {
+  border-bottom: 2px solid #D4A373;
+}
+
+.content-articles {
+  margin: 10px 40px;
+}
+.content-articles h4 {
+  font: 400 14px/16px "Roboto Light", sans-serif;
+  color: #D4A373;
+}
+.content-articles h1 {
+  font: 700 24px/28px "Roboto Light", sans-serif;
+}
+.content-articles-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.content-articles-table-link {
+  color: grey;
+}
+.content-articles-table-link:hover {
+  color: black;
+  transition: 0.3s;
+}
+.content-articles-table thead {
+  color: #6C757D;
+}
+.content-articles-table thead td {
+  margin: 6px 0;
+  padding: 8px 8px;
+  border: none;
+  text-align: left;
+}
+.content-articles-table tbody {
+  color: #495057;
+}
+.content-articles-table tbody td {
+  margin: 6px 0;
+  padding: 8px 8px;
+  border: none;
+  text-align: left;
+}
+.content-articles-table tbody td i {
+  font-weight: 100;
+  font-family: Arial, FontAwesome, sans-serif;
+}
+.content-articles-table tbody, .content-articles-table thead {
+  display: table;
+  width: 100%;
+}
+.content-articles-table tbody tr, .content-articles-table thead tr {
+  font: 400 12px/16px "Roboto", sans-serif;
+  border-bottom: 1px solid rgba(114, 114, 114, 0.2);
+}
+.content-articles-table tbody tr td img, .content-articles-table tbody th td img, .content-articles-table thead tr td img, .content-articles-table thead th td img {
+  vertical-align: middle;
+}
+.content-articles-table tbody tr td:nth-child(3), .content-articles-table tbody th td:nth-child(3), .content-articles-table thead tr td:nth-child(3), .content-articles-table thead th td:nth-child(3) {
+  font-weight: 500;
+  min-width: 250px;
+}
+.content-articles-table tbody tr td:nth-child(1), .content-articles-table tbody th td:nth-child(1), .content-articles-table thead tr td:nth-child(1), .content-articles-table thead th td:nth-child(1) {
+  width: 20px;
+}
+.content-articles-table tbody tr td:nth-child(2), .content-articles-table tbody th td:nth-child(2), .content-articles-table thead tr td:nth-child(2), .content-articles-table thead th td:nth-child(2) {
+  width: 50px;
+}
+.content-articles-table tbody tr td:last-child, .content-articles-table tbody th td:last-child, .content-articles-table thead tr td:last-child, .content-articles-table thead th td:last-child {
+  width: 30px;
+}
+.content-articles-table tbody tr td:nth-last-child(4), .content-articles-table tbody tr td :nth-last-child(3), .content-articles-table tbody tr td :nth-last-child(2), .content-articles-table tbody th td:nth-last-child(4), .content-articles-table tbody th td :nth-last-child(3), .content-articles-table tbody th td :nth-last-child(2), .content-articles-table thead tr td:nth-last-child(4), .content-articles-table thead tr td :nth-last-child(3), .content-articles-table thead tr td :nth-last-child(2), .content-articles-table thead th td:nth-last-child(4), .content-articles-table thead th td :nth-last-child(3), .content-articles-table thead th td :nth-last-child(2) {
+  width: 160px;
+}
+
+.content-login {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  max-width: 1440px;
+}
+.content-login-remember {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.content-login-remember-checkbox {
+  display: flex;
+  align-items: center;
+}
+.content-login-remember-checkbox label {
+  font: 400 14px/16px "Lora", serif;
+}
+.content-login-h1 {
+  margin: 0 auto 30px auto;
+  width: calc(100% - 80px);
+  max-width: 400px;
+  font-size: 36px;
+}
+@media only screen and (max-width: 991px) {
+  .content-login-h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .content-login-h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 565px) {
+  .content-login-h1 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .content-login-h1 {
+    font-size: 22px;
+    text-align: center;
+    width: calc(100% - 20px);
+  }
+}
+@media only screen and (max-width: 400px) {
+  .content-login-h1 {
+    width: 100vw;
+  }
+}
+.content-login-logo {
+  display: block;
+  font: 700 40px/44px "Spartan", sans-serif;
+  margin: 97px auto;
+  width: calc(100% - 80px);
+  max-width: 400px;
+}
+@media only screen and (max-width: 565px) {
+  .content-login-logo {
+    margin: 40px auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .content-login-logo {
+    text-align: center;
+    margin: 20px auto;
+  }
+}
+.content-login-left-block, .content-login-right-block {
+  width: 50vw;
+}
+.content-login-left-block {
+  position: relative;
+  background-image: url(../images/bg.png);
+  background-position: top;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-width: 767px) {
+  .content-login-left-block {
+    display: none;
+  }
+}
+.content-login-left-block:before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/logo.png);
+  margin: auto;
+  display: block;
+  bottom: 0;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 180px;
+  height: 80px;
+}
+@media only screen and (max-width: 767px) {
+  .content-login-left-block {
+    margin: 0 auto;
+    width: 80vw;
+  }
+}
+.content-login-right-block {
+  padding: 0;
+}
+.content-login-right-block form {
+  margin: 0 auto 97px auto;
+  width: calc(100% - 80px);
+  max-width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.content-login-right-block form input[type=text], .content-login-right-block form input[type=password] {
+  padding: 10px 12px;
+  font: 400 14px/24px "Lora", serif;
+  margin-bottom: 24px;
+}
+@media only screen and (max-width: 767px) {
+  .content-login-right-block {
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .content-login-right-block {
+    width: 100vw;
+  }
+}
+
+input[type=checkbox] {
+  margin-right: 18px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  color: #363839;
+  border: 1px solid #bdc1c6;
+  border-radius: 2px;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+}
+input[type=checkbox]:checked {
+  color: #fff;
+  border-color: #9c9e9f;
+  background: #bdc1c6;
+}
+
+@media screen and (max-width: 600px) {
+  .add {
+    display: block;
+    width: 180px;
+    margin-top: 10px;
+  }
+  .search {
+    width: 204px;
+  }
+  .content {
+    margin: 10px 30px;
+  }
+}
+
+/*# sourceMappingURL=admin.css.map */

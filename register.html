@@ -3,42 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/admin.min.css">
     <script src="https://kit.fontawesome.com/a7c1eeb7ad.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="left-block">
-
+    <div class="content-login">
+        <div class="content-login-left-block">
         </div>
-        <div class="right-block">
-            <div class="div-logo">
-                <a href="articles.html" class="logo l-logout">RUNO</a>
-            </div>
-            <h1 class="h-logout">Create account</h1>
+        <div class="content-login-right-block">
+            <a href="articles.html" class="content-login-logo">RUNO</a>
+            <h1 class="content-login-h1">Create account</h1>
             <form method="post">
-                <label for="username">Username</label>
+                <label class="label" for="username">Email</label>
                 <input type="text"
                        class="btn input"
                        name="username"
                        id="username"
                        autocomplete="on"
                        required>
-                <label for="password">Password</label>
+                <label class="label" for="password">Password</label>
                 <input type="password"
                        class="btn input"
                        name="password"
                        id="password"
                        autocomplete="on"
                        required>
-                <label for="confirm-password">Password</label>
+                <label class="label" for="confirm-password">Password</label>
                 <input type="password"
                        class="btn input"
                        name="confirm-password"
                        id="confirm-password"
                        autocomplete="on"
                        required>
-                <button class="btn add" type="submit">Create account</button>
+                <button class="btn sign" type="submit">Create account</button>
                 <button class="btn google" type="submit">Sign up with Google</button>
                 <p>
                     Already have an account? <a class="a-link" href="login.html" >Log in</a>

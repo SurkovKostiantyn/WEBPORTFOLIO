@@ -11,16 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.min.css">
     <script src="https://kit.fontawesome.com/a7c1eeb7ad.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header-main" id="header">
-        <div class="header-main-block">
-            <img class="cover" src="images/Image5.png" alt="5">
-        </div>
-        <div class="header-main-text newsPage">Richird Norton photorealistic<span class="br"></span>rendering as real photos<span class="br"></span><div class="small-text">Progressively incentivize cooperative systems through technically sound<span class="br"></span>functionalities. The credibly productivate seamless data.</div></div>
-    </header>
     <nav class="navbar" id="navbar">
         <a href="index.html" class="navbar-logo hoverable">RUNO</a>
         <ul class="navbar-menu">
@@ -28,6 +22,19 @@
             <li><a class="navbar-menu-item hoverable active" href="news.html">News</a></li>
         </ul>
     </nav>
+
+    <div class="banner" id="banner">
+        <div class="banner-block">
+            <img class="cover" src="images/Image5.png" alt="1">
+            <div class="singleNewsHeader">
+                <p class="big-text">
+                    Richird Norton photorealistic rendering as real photos
+                </p>
+                <p class="small-text">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="content-single">
         Seamlessly syndicate cutting-edge architectures rather than collaborative collaboration and idea-sharing. Proactively incubate visionary interfaces whereas premium benefits. Seamlessly negotiate ubiquitous leadership skills rather than parallel ideas. Dramatically visualize superior interfaces for best-of-breed alignments. Synergistically formulate performance based users through customized relationships. Interactively deliver cross-platform ROI via granular systems. Intrinsicly enhance effective initiatives vis-a-vis orthogonal outsourcing. Rapidiously monetize market-driven opportunities with multifunctional users. Collaboratively enhance visionary opportunities through revolutionary schemas. Progressively network just in time customer service without real-time scenarios.<span class="br double"></span>
         Synergistically drive e-business leadership with unique synergy. Compellingly seize market positioning ROI and bricks-and-clicks e-markets. Proactively myocardinate timely platforms through distributed ideas. Professionally optimize enabled core competencies for leading-edge sources. Professionally enhance stand-alone leadership with innovative synergy. Rapidiously generate backend experiences vis-a-vis long-term high-impact relationships. Authoritatively supply market-driven mindshare and bricks-and-clicks opportunities. Holisticly create diverse innovation through adaptive communities. Efficiently empower seamless meta-services with impactful opportunities. Distinctively transition virtual outsourcing with focused e-tailers.
@@ -59,6 +66,30 @@
             Related Posts
         </div>
         <div class="content-related-posts">
+            <a class="content-news-body-item scaleable" href="#">
+                <img src="images/related1.png" alt="1">
+                <div class="content-related-posts-item-text">
+                    <p class="date">08.08.2021</p>
+                    <p class="title">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse id nisi tempora ut voluptate voluptatem!</p>
+                </div>
+            </a>
+            <a class="content-news-body-item scaleable" href="#">
+                <img src="images/related2.png" alt="2">
+                <div class="content-related-posts-item-text">
+                    <p class="date">08.08.2021</p>
+                    <p class="title">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse id nisi tempora ut voluptate voluptatem!</p>
+                </div>
+            </a>
+            <a class="content-news-body-item scaleable" href="#">
+                <img src="images/related3.png" alt="3">
+                <div class="content-related-posts-item-text">
+                    <p class="date">08.08.2021</p>
+                    <p class="title">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse id nisi tempora ut voluptate voluptatem!</p>
+                </div>
+            </a>
             <a class="content-news-body-item scaleable" href="#">
                 <img src="images/related1.png" alt="1">
                 <div class="content-related-posts-item-text">
@@ -137,6 +168,23 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/common.js"></script>
+
+    <script type="text/javascript">
+        $('.content-related-posts').slick({
+            arrows: false,
+            dots: false,
+            autoplay: false,
+            autoplaySpeed: 1,
+            infinite: true,
+            speed: 2000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            draggable: false,
+        });
+    </script>
 </body>
 </html>

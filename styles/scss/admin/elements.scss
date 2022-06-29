@@ -1,0 +1,84 @@
+@import 'admin_variables.scss';
+
+a{
+  text-decoration: none !important;
+  color: $black;
+}
+
+input{
+  font-family: Arial, FontAwesome, sans-serif;
+  border: 1px solid rgba(114, 114, 114, 0.2);
+  padding: 10px;
+  margin: 0;
+  &:focus {
+    background: $lightBrown44;
+    @include transition(0.3s);
+  }
+}
+.btn{
+  padding: 10px;
+  border-radius: 6px;
+}
+.search{
+  border: 1px solid rgba(114, 114, 114, 0.2);
+  padding: 10px;
+  width: 300px;
+}
+.google{
+  color: $white;
+  border: 2px solid $black;
+  background: $black;
+  margin: 0 0 20px 0;
+  &:hover{
+    background: $grey;
+    border: 2px solid $grey;
+    @include transition(0.3s);
+  }
+}
+.add{
+  font-family: Arial, FontAwesome, sans-serif;
+  border: 2px solid $lightBrown;
+  background: $lightBrown;
+  color: $white;
+  float: right;
+  margin: 0 0 20px 0;
+  &:hover{
+    background: $darkBrown;
+    border: 2px solid $darkBrown;
+    @include transition(0.3s);
+  }
+}
+
+.sign{
+  font-family: Arial, FontAwesome, sans-serif;
+  border: 2px solid $lightBrown;
+  background: $lightBrown;
+  color: $white;
+  float: right;
+  margin: 0 0 20px 0;
+  &:hover{
+    background: $darkBrown;
+    border: 2px solid $darkBrown;
+    @include transition(0.3s);
+  }
+}
+
+.label{
+  margin: 0 0 10px 0;
+  font: 400 14px/16px $fontLora;
+  vertical-align: text-top;
+}
+
+form p{
+  font: 400 14px/24px $fontLora;
+  margin: 0;
+}
+
+form p a{
+  text-align: right;
+}
+
+.a-link{
+  font: 400 14px/24px $fontLora;
+  color: $lightBrown;
+}

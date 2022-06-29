@@ -130,7 +130,7 @@ $slick-opacity-not-active: 0.55 !default;
 /* Dots */
 
 .slick-dotted.slick-slider {
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
 }
 
 .slick-dots {
@@ -183,11 +183,25 @@ $slick-opacity-not-active: 0.55 !default;
                 opacity: $slick-opacity-not-active;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
+                @media #{$phones-big} {
+                    font-size: calc($slick-dot-size / 2);
+                    line-height: calc($slick-dot-size / 2);
+                }
+                @media #{$phones} {
+                    font-size: calc($slick-dot-size / 3);
+                    line-height: calc($slick-dot-size / 3);
+                }
+                @media #{$phones-mini} {
+                    display: none;
+                }
             }
         }
         &.slick-active button:before {
             color: $whiteColor;
             opacity: $slick-opacity-default;
         }
+    }
+    @media #{$phones-big} {
+        bottom: 12px;
     }
 }

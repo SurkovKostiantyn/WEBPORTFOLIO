@@ -338,14 +338,17 @@
   -moz-animation-duration: $duration;
   -o-animation-duration: $duration;
   animation-duration: $duration;
+
   -webkit-animation-iteration-count: $iteration;
   -moz-animation-iteration-count: $iteration;
   -o-animation-iteration-count: $iteration;
   animation-iteration-count: $iteration;
+
   -webkit-animation-name: $name;
   -moz-animation-name: $name;
   -o-animation-name: $name;
   animation-name: $name;
+
   -webkit-animation-direction: $direction;
   -moz-animation-direction: $direction;
   -o-animation-direction: $direction;
